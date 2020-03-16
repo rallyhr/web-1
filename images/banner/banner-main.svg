@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1359px" height="860px" viewBox="0 0 1359 860" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 57.1 (101010) - https://sketch.com -->
+    <title>1BFB4E87-B828-4DA5-98F5-0D2491FE49E7</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0.686792459" width="1359" height="860"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing-page-3" transform="translate(-45.000000, -38.000000)">
+            <g id="Rectangle" transform="translate(-1.000000, 37.000000)">
+                <g id="Group-19" transform="translate(46.000000, 0.313208)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                    <rect id="Rectangle" fill-opacity="0.173240822" fill="#4C6A82" mask="url(#mask-2)" transform="translate(249.224743, 614.313208) rotate(38.000000) translate(-249.224743, -614.313208) " x="248.724743" y="114.313208" width="1" height="1000"></rect>
+                    <rect id="Rectangle-Copy-2" fill-opacity="0.173240822" fill="#4C6A82" opacity="0.41343471" mask="url(#mask-2)" transform="translate(639.500000, 210.000000) rotate(38.000000) translate(-639.500000, -210.000000) " x="639" y="-290" width="1" height="1000"></rect>
+                    <rect id="Rectangle-Copy-3" fill="#CADBE7" mask="url(#mask-2)" transform="translate(1022.500000, -186.000000) rotate(38.000000) translate(-1022.500000, 186.000000) " x="1022" y="-686" width="1" height="1000"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

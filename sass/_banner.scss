@@ -1,0 +1,41 @@
+.banner-section{
+  
+    .container{
+        background-color: $brand-white;
+    }
+}
+.banner-text{
+   .banner-title{
+    font-size: 72px;
+    color: $brand-light;
+    margin-bottom: 0px;
+   }
+   p{
+       font-size: 40px;
+   }
+   img{
+       float: right;
+   }
+}
+.banner-wrap{
+    padding-top: 285px;
+    padding-bottom: 100px;
+    @extend .overly;
+    &::before{
+        background: url(../images/banner/banner.png);
+    }
+    &::after{
+        position: absolute;
+        bottom: 0px;
+        height: 150px;
+        width: 100%;
+        background: $theme-color;
+        content: "";
+        z-index: -1;
+    }
+    .banner-promo{
+        img{
+            margin-top: 35px;
+        }
+    }
+}

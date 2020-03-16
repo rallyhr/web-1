@@ -1,0 +1,135 @@
+.service-card {
+    @extend .overly;
+    max-width : 470px;
+    padding   : 60px;
+    background: $brand-white;
+
+    &::before {
+        background: $hover-color;
+        @include opacity(0);
+        @include transition;
+    }
+
+    &::after {
+        position: absolute;
+        left    : 0px;
+        top     : 0px;
+        content : "";
+        background: url(../images/components/globe.svg)no-repeat center top;
+        @include opacity(0);
+        width: 100%;
+        height: 100%;
+        @include transition;
+        z-index: -1;
+
+    }
+
+ 
+    h3 {
+        font-size: 50px;
+        max-width: 320px;
+        color    : $color;
+        @include transition;
+    }
+    p{
+        color: $color;
+        @include transition;
+    }
+    i{
+        font-size: 20px;
+        @include transition;
+    }
+    &:hover::before {
+        @include opacity(.95);
+    }
+    &:hover::after{
+        @include opacity(1);
+    }
+    &:hover h3, &:hover p, &:hover i{
+        color: $brand-white
+    }
+  &.minus-left{
+      margin-left: -10%;
+  }
+}
+
+.services-section {
+    .inner-wrap {
+        height    : 266px;
+        margin-top: -10%;
+
+        span.sub-heading {
+            position : absolute;
+            transform: rotate(90deg);
+            top      : -40%;
+            color    : #fff;
+            z-index  : 3;
+            cursor   : pointer;
+            font-size: 20px;
+            text-transform: uppercase;
+            i{
+                margin-left: 8px;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+.about-s-text{
+    max-width: 70%;
+    position: relative;
+  background-color: $brand-white;
+  margin: 0 auto;
+  padding: 60px 30px;
+  p{
+      font-size: 20px;
+      line-height: 30px;
+  }
+}
+.about-s-inner{
+    @extend .overly;
+    margin-top: 50px;
+    &::before{
+        background: url(../images/banner/abs.png)no-repeat center center / cover;
+        width: 80%;
+        left: -35%;
+    }
+    p{
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 25px;
+    }
+}
+.geo-card{
+    max-width: 277px;
+    margin: 0 auto 60px;
+    h4{
+        font-size: 16px;
+        color: $hover-color;
+        margin-bottom: 20px;
+    }
+    span{
+        display: block;
+        margin-bottom: 30px;
+    }
+    &.service-card{
+        &::before{
+            @include opacity(1);
+        }
+        h3, i{
+            font-size: 30px;
+            color: $brand-white;
+        }
+
+    }
+}
+.geo-service .white-bg{
+    padding: 60px;
+    .section-title{
+        margin-bottom: 60px;
+        span{
+            color: $hover-color;
+        }
+    }
+
+}

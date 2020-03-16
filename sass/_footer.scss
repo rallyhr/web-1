@@ -1,0 +1,45 @@
+.footer{
+    background-repeat: no-repeat;
+    background-position: center top;
+    padding: 50px 0;
+}
+.widget{
+    .widget-title{
+        text-transform: uppercase;
+    }
+    .f-logo{
+        margin-bottom: 50px;
+
+    }
+    .f-social{
+        margin-bottom: 10px;
+        a{
+            margin-right: 10px;
+        }
+    }
+   .subscribe-form{
+       position: relative;
+       max-width: 80%;
+       margin-left: auto;
+       input{
+           background-color: $hover-color;
+           border: none;
+           text-align: left;
+           color: $brand-white;
+           &::placeholder{
+               color: $brand-white;
+           }
+       }
+       button{
+           position: absolute;
+           right: 10px;
+           top: 0px;
+           color: $brand-white;
+           background: transparent;
+           cursor: pointer;
+           border: none;
+           top: 50%;
+           transform: translateY(-50%);
+       }
+   }
+}

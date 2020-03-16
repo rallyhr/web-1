@@ -1,0 +1,72 @@
+// Template Base
+
+/* ======================================
+1.2 FONTS FOR THEME
+========================================*/
+
+  @font-face {
+    font-family: sf-ui-desplay-regular;
+    src: url(../fonts/sf-ui-display-light.woff);
+}
+
+@font-face {
+  font-family: sf-ui-desplay-black;
+    src: url(../fonts/sf-ui-display-black.woff);
+}
+body {
+  font-family: sf-ui-desplay-regular;
+  line-height: 22px;
+  font-size: 16px;
+  color: $color;
+  background: $theme-color;
+  position: relative;
+  font-weight: 400;
+  height: 100%;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  
+font-family: sf-ui-desplay-black;
+font-weight: 900;
+}
+h3{
+  font-size: 20px;
+}
+a {
+  color: $color;
+  @include transition;
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    @include transition;
+    color: $color;
+  }
+}
+
+.sub-heading {
+  font-size: 32px;
+}
+
+input, textarea {
+  color: $color;
+  width: 100%;
+  padding: 10px 15px;
+}
+
+::-moz-placeholder {
+  opacity: 1;
+}
+
+img, figure {
+  max-width: 100%;
+  object-fit: cover;
+  margin: 0px;
+}

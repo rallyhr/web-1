@@ -1,0 +1,52 @@
+.deliver-card{
+    background: $brand-white;
+    padding: 30px;
+    width: 27.33%;
+    float: left;
+    margin: 20px;
+    min-height: 235px;
+    @include transition;
+    @extend .overly;
+    box-shadow:  0 8px 14px 0 rgba(0, 0, 0, 0.17);
+    &::before{
+        background: url(../images/components/dollar.svg)no-repeat right top;
+        @include opacity(0);
+        @include transition();
+    }
+    .more{
+        position: absolute;
+        right: 40px;
+        @include opacity(0);
+        @include transition;
+    }
+    h3{
+        color: #d6e4ef;
+        position: absolute;
+        bottom: 50px;
+    }
+    &:hover::before{
+        @include opacity(1);
+    }
+    &:hover{
+        background: $hover-color;
+    }
+    &:hover i {
+        color: $brand-white;
+    }
+    &:hover span{
+        @include opacity(1);
+        right: 30px;
+    }
+}
+.delivered-section{
+    padding: 120px 0;
+    .section-title{
+        font-size: 70px;
+    }
+    .sub-heading{
+        color: $brand-white;
+        font-size: 30px;
+        max-width: 260px;
+
+    }
+}

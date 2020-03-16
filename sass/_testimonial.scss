@@ -1,0 +1,82 @@
+
+.testimonial-section{
+    position: relative;
+    padding-bottom: 200px;
+    .test-bg{
+        position: absolute;
+        top: 20%;
+        right: 0px;
+    }
+}
+.testimonial-wrap{
+    max-width: 95%;
+    position: relative;
+    top: 20%;
+    margin: 0 auto;
+
+    padding-top: 250px;
+}
+.single-quote {
+    @extend .clear;
+    .quote-brand{
+        padding-bottom: 10px;
+        img{
+            max-width: 15%;
+        }
+    }
+    .quote-thumb {
+        float    : left;
+        max-width: 28.5%;
+    }
+
+    .quote-text {
+        background: $hover-color;
+        display   : table;
+        padding   : 80px 80px 30px;
+        @extend .overly;
+        &::before{
+            content: "\f10d";
+            display: table;
+            background: transparent;
+            color: $brand-white;
+            font-family: fontawesome;
+            left: 40px;
+            font-size: 30px;
+            top: 20px;
+            
+        }
+        p{
+            font-size: 16px;
+            font-family: Georgia;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: italic;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+        }
+        p,.quote-name{
+            color: $brand-white;
+        }
+    }
+}
+.owl-dots{
+    position: absolute;
+    top: 0;
+    z-index: 99999;
+    left: 0;
+    .owl-dot{
+        display: inline-block;
+        span {
+            width: 14px;
+            height: 14px;
+            background-color: #d6e4ef;
+            margin: 5px 7px;
+            display: block;
+            border-radius: 30px;
+        }
+        &.active span{
+            background-color: $hover-color;
+        }
+    }
+} 

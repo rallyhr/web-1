@@ -1,0 +1,100 @@
+/*===============================================
+2. Common Style
+ ===============================================*/
+ .white-bg{
+   background-color: $brand-white;
+ }
+ .clear::after{
+   clear: both;
+   display: table;
+   content: "";
+ }
+.overly{
+  position: relative;
+  z-index: 1;
+  &::before{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #000;
+  }
+}
+.list-clear{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.section-padding {
+  padding: 100px 0px;
+  @media #{$small_device} {
+    padding: 70px 0px;
+  }
+  @media #{$tab_device} {
+    padding: 80px 0;
+  }
+}
+.section-title {
+  font-size: 40px;
+  margin-bottom: 10px;
+  font-weight: 900;
+  color: $color;
+  text-transform: uppercase;
+}
+.sub-heading{
+  font-size: 20px;
+
+}
+
+.custom-btn {
+  display: inline-block;
+  padding: 18px 30px;
+  color: #484848;
+  font-weight: 500;
+  cursor: pointer;
+  background: $brand-white;
+  text-transform: uppercase;
+  border-radius: 50px;
+  @include transition();
+  &.gr-btn{
+    color: $brand-white;
+    background: rgb(23, 111, 187);
+    background: -moz-linear-gradient(120deg, rgb(23, 111, 187) 0%, rgb(30, 136, 229) 100%);
+    background: -webkit-linear-gradient(120deg, rgb(23, 111, 187) 0%, rgb(30, 136, 229) 100%);
+    background: -o-linear-gradient(120deg, rgb(23, 111, 187) 0%, rgb(30, 136, 229) 100%);
+    background: -ms-linear-gradient(120deg, rgb(23, 111, 187) 0%, rgb(30, 136, 229) 100%);
+    background: linear-gradient(210deg, rgb(23, 111, 187) 0%, rgb(30, 136, 229) 100%);
+    -webkit-box-shadow: 0px 4px 16px 0px rgba(30, 136, 229, 0.25);
+    -moz-box-shadow:    0px 4px 16px 0px rgba(30, 136, 229, 0.25);
+    box-shadow:         0px 4px 16px 0px rgba(30, 136, 229, 0.25);
+    &:hover{
+      color: $brand-white;
+    }
+  }
+  &:hover{
+    color: #484848;
+  }
+}
+#scrollUp {
+  width: 40px;
+  height: 40px;
+  background: $theme-color;
+  display: block;
+  bottom: 60px;
+  right: 30px;
+  text-align: center;
+  line-height: 40px;
+  color: $brand-white;
+  border-radius: 50%;
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.2);
+}
+/* =====================================
+16.1 Form Notification
+=======================================*/
+
+.owl-carousel .owl-item img{
+  width: auto;
+}

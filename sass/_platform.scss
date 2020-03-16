@@ -1,0 +1,56 @@
+.pt-wrap{
+    position: relative;
+    margin-top: -80px;
+    padding: 0px;
+    margin-bottom: 40px;
+}
+.platform-txt-left{
+    position: relative;
+    a{
+        font-size: 20px;
+        color: $brand-white;
+        max-width: 85%;
+        i{
+            position: absolute;
+            right: 0px;
+            top: 10px;
+        }
+    }
+}
+.platform-txt{
+    p{
+        font-size: 18px;
+        line-height: 27px;
+    }
+    span{
+        color: $hover-color;
+        font-weight: 900;
+    }
+}
+.platforms-tab{
+    margin-top: 60px;
+    .nav{
+        display: inline-block;
+        text-align: right;
+        border: none;
+        .nav-link{
+            display: block;
+            font-family: sf-ui-desplay-black;
+            border: none;
+            max-width: 90%;
+            &.active {
+                color: $hover-color;
+                background-color: transparent;
+                border: none;
+            }
+        }
+    }
+    .tab-content{
+        background: $brand-white;
+        padding: 60px;
+        img{
+            margin-bottom: 30px;
+            display: block
+        }
+    }
+}

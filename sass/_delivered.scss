@@ -7,7 +7,7 @@
     min-height: 235px;
     @include transition;
     @extend .overly;
-    box-shadow:  0 8px 14px 0 rgba(0, 0, 0, 0.17);
+    box-shadow:  0 8px 14px 0 rgba(0, 0, 0, 0.03);
     &::before{
         background: url(../images/components/dollar.svg)no-repeat right top;
         @include opacity(0);

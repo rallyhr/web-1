@@ -8,7 +8,11 @@
 ========================================*/
 @font-face {
   font-family: sf-ui-desplay-regular;
-  src: url(../fonts/sf-ui-display-light.woff); }
+  src: url(../fonts/sf-ui-display-regular.woff); }
+
+@font-face {
+  font-family: sf-ui-desplay-semibold;
+  src: url(../fonts/sf-ui-display-regular.woff); }
 
 @font-face {
   font-family: sf-ui-desplay-black;
@@ -152,7 +156,7 @@ img, figure {
 #scrollUp {
   width: 40px;
   height: 40px;
-  background: #e0edf7;
+  background: #973694;
   display: block;
   bottom: 60px;
   right: 30px;
@@ -226,6 +230,14 @@ a.navbar-brand {
     overflow: hidden;
     padding-bottom: 80px; }
 
+.platform-promo h2.promo-title, .full-promo h2.promo-title {
+  float: none;
+  text-transform: capitalize; }
+
+.platform-promo p, .full-promo p {
+  max-width: 40%;
+  font-size: 20px; }
+
 .footer {
   background-repeat: no-repeat;
   background-position: center top;
@@ -250,7 +262,8 @@ a.navbar-brand {
     background-color: #973694;
     border: none;
     text-align: left;
-    color: #fff; }
+    color: #fff;
+    padding: 19px; }
     .widget .subscribe-form input::placeholder {
       color: #fff; }
   .widget .subscribe-form button {
@@ -269,7 +282,7 @@ a.navbar-brand {
 
 .banner-text .banner-title {
   font-size: 72px;
-  color: #d6e4ef;
+  color: #4c5258;
   margin-bottom: 0px; }
 
 .banner-text p {
@@ -392,7 +405,8 @@ a.navbar-brand {
   .about-s-inner::before {
     background: url(../images/banner/abs.png) no-repeat center center/cover;
     width: 80%;
-    left: -35%; }
+    left: -35%;
+    height: 130%; }
   .about-s-inner p {
     font-size: 16px;
     line-height: 22px;
@@ -407,7 +421,13 @@ a.navbar-brand {
     margin-bottom: 20px; }
   .geo-card span {
     display: block;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    transform: translateY(0); }
   .geo-card.service-card::before {
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -415,6 +435,8 @@ a.navbar-brand {
   .geo-card.service-card h3, .geo-card.service-card i {
     font-size: 30px;
     color: #fff; }
+  .geo-card:hover span {
+    transform: translateY(-10px); }
 
 .geo-service .white-bg {
   padding: 60px; }
@@ -494,7 +516,7 @@ a.navbar-brand {
   -ms-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.17); }
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.03); }
   .deliver-card::before {
     background: url(../images/components/dollar.svg) no-repeat right top;
     opacity: 0;
@@ -608,3 +630,116 @@ a.navbar-brand {
       border-radius: 30px; }
     .owl-dots .owl-dot.active span {
       background-color: #973694; }
+
+.pt-wrap {
+  position: relative;
+  margin-top: -80px;
+  padding: 0px;
+  margin-bottom: 40px; }
+
+.platform-txt-left {
+  position: relative; }
+  .platform-txt-left a {
+    font-size: 20px;
+    color: #fff;
+    max-width: 85%; }
+    .platform-txt-left a i {
+      position: absolute;
+      right: 0px;
+      top: 10px; }
+
+.platform-txt p {
+  font-size: 18px;
+  line-height: 27px; }
+
+.platform-txt span {
+  color: #973694;
+  font-weight: 900; }
+
+.platforms-tab {
+  margin-top: 60px; }
+  .platforms-tab .nav {
+    display: inline-block;
+    text-align: right;
+    border: none; }
+    .platforms-tab .nav .nav-link {
+      display: block;
+      font-family: sf-ui-desplay-black;
+      border: none;
+      max-width: 90%; }
+      .platforms-tab .nav .nav-link.active {
+        color: #973694;
+        background-color: transparent;
+        border: none; }
+  .platforms-tab .tab-content {
+    background: #fff;
+    padding: 60px; }
+    .platforms-tab .tab-content img {
+      margin-bottom: 30px;
+      display: block; }
+
+.header-promo.full-promo p {
+  max-width: 75%;
+  line-height: 27px; }
+
+.about-txt {
+  padding: 60px; }
+  .about-txt h3 {
+    margin-bottom: 30px; }
+  .about-txt a {
+    font-size: 30px;
+    color: #fff;
+    max-width: 41%;
+    position: relative;
+    display: block; }
+    .about-txt a:hover {
+      color: #973694; }
+    .about-txt a i {
+      position: absolute;
+      right: -30px;
+      top: 10px; }
+
+.contact-us {
+  padding: 60px; }
+  .contact-us .contact-info {
+    max-width: 220px;
+    margin-right: auto;
+    margin-top: 30px; }
+    .contact-us .contact-info h4 {
+      font-family: sf-ui-desplay-regular;
+      font-size: 20px;
+      margin-bottom: 25px; }
+    .contact-us .contact-info p {
+      line-height: 1.38; }
+    .contact-us .contact-info.about-email {
+      max-width: 250px;
+      margin-top: 70px;
+      margin-right: auto; }
+
+form .form-group {
+  margin-bottom: 30px; }
+  form .form-group.half-form {
+    width: 48%;
+    float: left; }
+    form .form-group.half-form + .half-form {
+      float: right; }
+  form .form-group input, form .form-group textarea, form .form-group select {
+    background: #fff;
+    border: none;
+    padding: 19px 15px;
+    width: 100%;
+    color: #d6e4ef; }
+    form .form-group input::placeholder, form .form-group textarea::placeholder, form .form-group select::placeholder {
+      color: #d6e4ef; }
+
+form .custom-btn {
+  background-color: #973694;
+  margin-top: 45px;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.03);
+  padding: 19px 85px; }
+  form .custom-btn:hover {
+    color: #fff;
+    background-color: #7d2c7b; }

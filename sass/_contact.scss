@@ -1,0 +1,58 @@
+.contact-us{
+    padding: 60px;
+    .contact-info{
+        max-width: 220px;
+        margin-right: auto;
+        margin-top: 30px;
+        h4{
+            font-family: sf-ui-desplay-regular;
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+        p{
+            line-height: 1.38;
+        }
+        &.about-email{
+            max-width: 250px;
+            margin-top: 70px;
+            margin-right: auto;
+        }
+    }
+}
+form{
+    .form-group{
+        margin-bottom: 30px;
+        &.half-form{
+            width: 48%;
+            float: left;
+            & + .half-form{
+                float: right;
+            }
+        }
+        input,textarea,select{
+            background: $brand-white;
+            border: none;
+            padding: 19px 15px;
+            width: 100%;
+            color: $brand-light;
+            &::placeholder{
+                color: $brand-light;
+            }
+        }
+    
+    }
+    .custom-btn{
+        background-color: $hover-color;
+        margin-top: 45px;
+        color: $brand-white;
+        border: none;
+        border-radius: 3px;
+  box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.03);
+  padding: 19px 85px;
+  &:hover{
+      color: $brand-white;
+      background-color: #7d2c7b;
+  }
+    }
+}
+

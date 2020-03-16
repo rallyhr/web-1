@@ -93,6 +93,7 @@
         background: url(../images/banner/abs.png)no-repeat center center / cover;
         width: 80%;
         left: -35%;
+        height: 130%;
     }
     p{
         font-size: 16px;
@@ -111,6 +112,8 @@
     span{
         display: block;
         margin-bottom: 30px;
+        @include transition;
+        transform: translateY(0);
     }
     &.service-card{
         &::before{
@@ -121,6 +124,9 @@
             color: $brand-white;
         }
 
+    }
+    &:hover span{
+        transform: translateY(-10px);
     }
 }
 .geo-service .white-bg{

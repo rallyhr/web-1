@@ -7,12 +7,18 @@
    $('.testimonial-wrap').owlCarousel({
     items: 1,
     loop:true,
-    autoplay: false,
+    autoplay: true,
     autoplayTimeout:3000,
     dots: true
 });
 
-
+$('.platform-carousel').owlCarousel({
+    items: 1,
+    loop:true,
+    autoplay: true,
+    autoplayTimeout:3000,
+    dots: false
+});
     $("a[rel^='prettyPhoto']").prettyPhoto({
         default_width: 750,
         default_height: 375,

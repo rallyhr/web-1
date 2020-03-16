@@ -133,3 +133,81 @@
     }
 
 }
+.about-talent{
+    position: relative;
+    z-index: 1;
+    .talent-wrap{
+        @extend .overly;
+        max-width: 70%;
+        margin: 0 auto;
+        background-color: $brand-white;
+        padding: 60px 20px;
+        &::before{
+            background: url(../images/banner/talent-bg.png)no-repeat center right / cover;
+            width: 70%;
+            left: auto;
+            right: -23%;
+        }
+        .talent-txt{
+            max-width: 70%;
+            p{
+                font-size: 20px;
+                line-height: 30px;
+                padding: 30px 0px;
+            }
+            ul{
+                @extend .list-clear;
+                li{
+                    @extend .overly;
+                    padding-left: 25px;
+                    font-size: 16px;
+                    line-height: 22px;
+                    margin-bottom: 20px;
+                    &:before{
+                        width: 12px;
+                        height: 12px;
+                        background: $hover-color;
+                        top: 4px;
+                    }
+                }
+            }
+           
+        }
+     
+    }
+}
+
+.talent-services{
+    .section-title{
+        padding: 60px 60px 30px;
+    }
+    .ts-text{
+        padding: 60px;
+        h4{
+            font-size: 16px;
+            color: $hover-color;
+            margin-bottom: 20px;
+        }
+        p{
+            margin-bottom: 25px;
+        }
+        span{
+            display: block;
+            margin-bottom: 30px;
+        }
+
+    }
+}
+.service-card.ts-card{
+    max-width: 277px;
+    padding: 30px;
+    margin-top: 30px;
+    h3{
+        font-size: 30px;
+        color: $brand-white;
+    }
+    &::before{
+        @include opacity(1);
+    }
+    i{color: $brand-white}
+}

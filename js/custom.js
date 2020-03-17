@@ -19,25 +19,10 @@ $('.platform-carousel').owlCarousel({
     autoplayTimeout:3000,
     dots: false
 });
-    $("a[rel^='prettyPhoto']").prettyPhoto({
-        default_width: 750,
-        default_height: 375,
-    });
-
-
-    $('.pager-img').on('click', function () {
-        $('.middle-item').attr('src', $(this).attr('src'));
-    });
-
-    //Scroll spy
-    $('body').scrollspy({
-     target: '.navbar',
-     offset: 90,
-      });
     /* =================================
             ===  Sticky Menu       ===
             =================================== */
-    var header = $('.main-menu-wraps');
+    var header = $('.main-menu');
     var win = $(window);
 
     win.on('scroll', function () {

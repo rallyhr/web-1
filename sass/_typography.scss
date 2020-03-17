@@ -31,6 +31,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media #{$desk_device} {
+  .container{
+    max-width: 1030px;
+  }
+}
+
 h1,
 h2,
 h3,

@@ -179,8 +179,24 @@ img, figure {
 .owl-carousel .owl-item img {
   width: auto; }
 
+@keyframes jumping_animation {
+  0% {
+    top: 20px; }
+  50% {
+    top: 30px; }
+  100% {
+    top: 70px; } }
+
+@keyframes jumping_animation2 {
+  0% {
+    left: 20px; }
+  50% {
+    left: 30px; }
+  100% {
+    left: 70px; } }
+
 .navbar {
-  padding-top: 60px; }
+  padding-top: 80px; }
   @media only screen and (max-width: 767px) {
     .navbar {
       background-color: #e0edf7;
@@ -198,7 +214,7 @@ img, figure {
       color: #4c5258;
       display: block;
       text-transform: capitalize;
-      padding: 40px 22px;
+      padding: 20px 22px;
       font-size: 16px;
       font-family: sf-ui-desplay-semibold;
       font-weight: 700; }
@@ -438,7 +454,7 @@ a.navbar-brand {
     margin-top: 35px; }
 
 .service-card {
-  padding: 160px 60px 140px;
+  min-height: 455px;
   background: #fff;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
@@ -464,6 +480,10 @@ a.navbar-brand {
     -ms-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out; }
+  .service-card.active::before {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100); }
   .service-card::after {
     position: absolute;
     left: 0px;
@@ -481,9 +501,13 @@ a.navbar-brand {
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
     z-index: -1; }
+  .service-card.active::after {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100); }
   .service-card .service-hover {
     position: absolute;
-    bottom: -35%;
+    bottom: -58%;
     left: 10%;
     width: 65%;
     -webkit-transition: all 0.4s ease-in-out;
@@ -498,20 +522,15 @@ a.navbar-brand {
       .service-card .service-hover {
         max-width: 90%; } }
     .service-card .service-hover p {
-      visibility: hidden;
-      opacity: 0;
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-      filter: alpha(opacity=0);
-      margin-top: 50px; }
+      padding-top: 70px;
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -ms-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out; }
       @media only screen and (min-width: 768px) and (max-width: 991px) {
         .service-card .service-hover p {
           font-size: 14px; } }
-    .service-card .service-hover:hover p {
-      display: block;
-      visibility: visible;
-      opacity: 1;
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-      filter: alpha(opacity=100); }
   .service-card a {
     font-size: 50px;
     max-width: 320px;
@@ -528,7 +547,7 @@ a.navbar-brand {
       .service-card a {
         font-size: 35px; } }
   .service-card i {
-    font-size: 20px;
+    font-size: 26px;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -ms-transition: all 0.4s ease-in-out;
@@ -547,29 +566,44 @@ a.navbar-brand {
     filter: alpha(opacity=100); }
   .service-card:hover a,
   .service-card:hover p,
-  .service-card:hover i {
+  .service-card:hover i,
+  .service-card.active p,
+  .service-card.active a,
+  .service-card.active i {
     color: #fff; }
   .service-card.minus-left {
-    margin: 0 auto; }
+    margin: 0 auto;
+    min-height: 364px; }
+    .service-card.minus-left .service-hover {
+      width: 73%;
+      bottom: -50%; }
     .service-card.minus-left::after {
       background: url(../images/components/buser.svg) no-repeat center right; }
-  .service-card:hover .service-hover {
+  .service-card:hover .service-hover,
+  .service-card.active .service-hover {
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=100);
     bottom: 30px; }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
-      .service-card:hover .service-hover {
+      .service-card:hover .service-hover,
+      .service-card.active .service-hover {
         bottom: 10px; } }
     @media only screen and (max-width: 767px) {
-      .service-card:hover .service-hover {
+      .service-card:hover .service-hover,
+      .service-card.active .service-hover {
         bottom: 10px; } }
-  .service-card:hover .service-hover p {
+  .service-card:hover .service-hover p,
+  .service-card.active .service-hover p {
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=100);
-    margin-top: 0px;
+    padding-top: 30px;
     visibility: visible; }
+  .service-card.active::before {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100); }
 
 .services-section .inner-wrap {
   height: 266px;
@@ -588,9 +622,11 @@ a.navbar-brand {
     text-transform: uppercase;
     font-family: sf-ui-desplay-black;
     letter-spacing: 2px; }
-    .services-section .inner-wrap span.sub-heading i {
+    .services-section .inner-wrap span.sub-heading img {
       margin-left: 8px;
-      display: inline-block; }
+      display: inline-block;
+      left: 180px;
+      transform: rotate(-90deg); }
 
 .about-service {
   padding-bottom: 20px; }
@@ -757,6 +793,38 @@ a.navbar-brand {
   .service-card.ts-card i {
     color: #fff; }
 
+.delivered-section {
+  padding: 120px 0; }
+  .delivered-section .deliver-heeader {
+    max-width: 260px;
+    position: relative; }
+    .delivered-section .deliver-heeader img {
+      position: absolute;
+      bottom: 20px;
+      left: 0px;
+      color: #fff;
+      font-size: 40px;
+      backface-visibility: hidden;
+      animation: jumping_animation 2s ease-in-out 2s infinite alternate;
+      animation-delay: 1s;
+      transition: all 1s ease 3s;
+      user-select: none; }
+    .delivered-section .deliver-heeader .sub-heading a {
+      color: #fff;
+      font-size: 30px;
+      margin-left: 30px;
+      display: block; }
+      .delivered-section .deliver-heeader .sub-heading a:hover {
+        color: #973694; }
+  .delivered-section .section-title {
+    font-size: 70px;
+    text-transform: capitalize; }
+    @media only screen and (max-width: 767px) {
+      .delivered-section .section-title {
+        font-size: 40px; } }
+  .delivered-section .deliver-inner p {
+    font-size: 20px; }
+
 .deliver-card {
   background: #fff;
   padding: 30px;
@@ -775,6 +843,12 @@ a.navbar-brand {
     .deliver-card {
       width: 100%;
       margin: 30px 0 20px; } }
+  .deliver-card:last-child {
+    background: transparent;
+    border: 8px solid #d6e4ef;
+    box-shadow: none; }
+    .deliver-card:last-child a, .deliver-card:last-child i {
+      color: #fff; }
   .deliver-card .img-wrap {
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -798,10 +872,13 @@ a.navbar-brand {
     -ms-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out; }
+    .deliver-card .more i {
+      font-size: 24px; }
   .deliver-card h3 a {
     color: #d6e4ef;
     position: absolute;
-    bottom: 50px; }
+    text-transform: uppercase;
+    bottom: 30px; }
   .deliver-card:hover::before {
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -819,36 +896,6 @@ a.navbar-brand {
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=100); }
-  .deliver-card:last-child {
-    background: transparent;
-    border: 8px solid #d6e4ef; }
-    .deliver-card:last-child a, .deliver-card:last-child i {
-      color: #fff; }
-
-.delivered-section {
-  padding: 120px 0; }
-  .delivered-section .deliver-heeader {
-    max-width: 260px;
-    position: relative; }
-    .delivered-section .deliver-heeader i {
-      position: absolute;
-      bottom: 20px;
-      left: 0px;
-      color: #fff;
-      font-size: 40px; }
-    .delivered-section .deliver-heeader .sub-heading a {
-      color: #fff;
-      font-size: 30px;
-      margin-left: 30px;
-      display: block; }
-  .delivered-section .section-title {
-    font-size: 70px;
-    text-transform: capitalize; }
-    @media only screen and (max-width: 767px) {
-      .delivered-section .section-title {
-        font-size: 40px; } }
-  .delivered-section .deliver-inner p {
-    font-size: 20px; }
 
 .testimonial-section {
   position: relative;

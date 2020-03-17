@@ -1,82 +1,96 @@
 .service-card {
     @extend .overly;
-    padding   : 160px 60px 140px;
+    min-height: 455px;
     background: $brand-white;
     @include transition;
     max-width: 520px;
     overflow: hidden;
+
     @media #{$tab_device} {
         padding: 150px 40px 100px;
     }
+
     @media #{$small_device} {
         padding: 160px 30px 140px;
         margin-bottom: 60px
     }
+
     &::before {
         background: $hover-color;
         @include opacity(0);
         @include transition;
     }
 
+    &.active::before {
+        @include opacity(1);
+    }
+
     &::after {
-        position  : absolute;
-        left      : 0px;
-        top       : 0px;
-        content   : "";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        content: "";
         background: url(../images/components/cs.png)no-repeat center top;
         @include opacity(0);
-        width : 100%;
+        width: 100%;
         height: 100%;
         @include transition;
         z-index: -1;
 
     }
 
-    .service-hover{
+    &.active::after {
+        @include opacity(1);
+    }
+
+    .service-hover {
         position: absolute;
-        bottom: -35%;
+        bottom: -58%;
         left: 10%;
         width: 65%;
         @include transition;
+
         @media #{$tab_device} {
             width: 75%;
         }
+
         @media #{$small_device} {
-            max-width: 90%; 
+            max-width: 90%;
         }
-        p{
-            visibility: hidden;
-           @include opacity(0);
-           margin-top: 50px;
-           @media #{$tab_device} {
-            font-size: 14px;
+
+        p {
+            padding-top: 70px;
+            @include transition;
+
+            @media #{$tab_device} {
+                font-size: 14px;
+            }
         }
-        }
-        &:hover p{
-            display: block;
-            visibility: visible;
-            @include opacity(1);
-        }
+
     }
+
     a {
         font-size: 50px;
         max-width: 320px;
-        color    : $color;
+        color: $color;
         @include transition;
+
         @media #{$tab_device} {
             font-size: 32px;
         }
+
         @media #{$small_device} {
             font-size: 35px;
         }
     }
 
     i {
-        font-size: 20px;
+        font-size: 26px;
         @include transition;
         position: absolute;
         top: 30px;
         right: 30px;
+
     }
 
     &:hover::before {
@@ -89,56 +103,79 @@
 
     &:hover a,
     &:hover p,
-    &:hover i {
+    &:hover i,
+    &.active p,
+    &.active a,
+    &.active i {
         color: $brand-white
     }
 
     &.minus-left {
-        margin   : 0 auto;
-        &::after{
+        margin: 0 auto;
+        min-height: 364px;
+
+        .service-hover {
+            width: 73%;
+            bottom: -50%;
+        }
+
+        &::after {
             background: url(../images/components/buser.svg)no-repeat center right;
         }
+
     }
-   
-    &:hover .service-hover{
+
+    &:hover .service-hover,
+    &.active .service-hover {
         @include opacity(1);
         bottom: 30px;
+
         @media #{$tab_device} {
             bottom: 10px;
         }
+
         @media #{$small_device} {
             bottom: 10px;
         }
     }
-    &:hover .service-hover p{
+
+    &:hover .service-hover p,
+    &.active .service-hover p {
         @include opacity(1);
-       margin-top: 0px;
-       visibility: visible;
+        padding-top: 30px;
+        visibility: visible;
+    }
+
+    &.active::before {
+        @include opacity(1);
     }
 }
 
 .services-section {
     .inner-wrap {
-        height    : 266px;
+        height: 266px;
         margin-top: -10%;
+
         @media #{$small_device} {
             height: 120px;
         }
         span.sub-heading {
-            position      : absolute;
-            transform     : rotate(90deg);
-            top           : -40%;
-            color         : #fff;
-            z-index       : 3;
-            cursor        : pointer;
-            font-size     : 20px;
+            position: absolute;
+            transform: rotate(90deg);
+            top: -40%;
+            color: #fff;
+            z-index: 3;
+            cursor: pointer;
+            font-size: 20px;
             text-transform: uppercase;
-            font-family   : sf-ui-desplay-black;
+            font-family: sf-ui-desplay-black;
             letter-spacing: 2px;
-
-            i {
+            img {
                 margin-left: 8px;
-                display    : inline-block;
+                display: inline-block;
+                left: 180px;
+                transform: rotate(-90deg);
+          
             }
         }
     }
@@ -150,35 +187,36 @@
 
     &::before {
         background: url(../images/components/globe.svg)no-repeat center right;
-        z-index   : 1;
+        z-index: 1;
         @include opacity(.25);
     }
 
     &::after {
-        position        : absolute;
-        width           : 87%;
-        height          : 100%;
+        position: absolute;
+        width: 87%;
+        height: 100%;
         background-color: $brand-white;
-        content         : "";
-        right           : 0px;
-        top             : 0px;
-        z-index         : -1;
+        content: "";
+        right: 0px;
+        top: 0px;
+        z-index: -1;
     }
 }
 
 .about-s-text {
     max-width: 70%;
-    position : relative;
-    margin   : 0 auto;
-    padding  : 60px 30px;
+    position: relative;
+    margin: 0 auto;
+    padding: 60px 30px;
+
     @media #{$small_device} {
         padding: 30px;
         max-width: 90%;
     }
-  
+
 
     p {
-        font-size  : 20px;
+        font-size: 20px;
         line-height: 30px;
     }
 }
@@ -189,34 +227,35 @@
 
     &::before {
         background: url(../images/banner/abs.png)no-repeat center center / cover;
-        width     : 80%;
-        left      : -35%;
-        height    : 140%;
+        width: 80%;
+        left: -35%;
+        height: 140%;
+
         @media #{$small_device} {
             display: none;
         }
-      
+
     }
 
     p {
-        font-size    : 16px;
-        line-height  : 22px;
+        font-size: 16px;
+        line-height: 22px;
         margin-bottom: 25px;
     }
 }
 
 .geo-card {
     max-width: 277px;
-    margin   : 0 auto 60px;
+    margin: 0 auto 60px;
 
     h4 {
-        font-size    : 16px;
-        color        : $hover-color;
+        font-size: 16px;
+        color: $hover-color;
         margin-bottom: 20px;
     }
 
     span {
-        display      : block;
+        display: block;
         margin-bottom: 30px;
         @include transition;
         transform: translateY(0);
@@ -230,7 +269,7 @@
         h3 a,
         i {
             font-size: 30px;
-            color    : $brand-white;
+            color: $brand-white;
         }
 
     }
@@ -255,13 +294,14 @@
 
 .about-talent {
     position: relative;
-    z-index : 1;
+    z-index: 1;
     @extend .overly;
+
     &::before {
         background-color: $brand-white;
-        left            : auto;
-        right           : 0px;
-        width           : 87%;
+        left: auto;
+        right: 0px;
+        width: 87%;
     }
 
     &::after {
@@ -273,29 +313,34 @@
         height: 135%;
         content: "";
         position: absolute;
+
         @media #{$small_device} {
             display: none;
         }
-      
+
 
     }
 
     .talent-wrap {
         max-width: 70%;
-        margin   : 0 auto;
+        margin: 0 auto;
+
         @media #{$small_device} {
             max-width: 95%;
         }
+
         .talent-txt {
             max-width: 95%;
             padding-bottom: 30px;
+
             @media #{$small_device} {
                 padding-left: 30px;
             }
+
             p {
-                font-size  : 20px;
+                font-size: 20px;
                 line-height: 30px;
-                padding    : 30px 0px;
+                padding: 30px 0px;
             }
 
             ul {
@@ -303,16 +348,16 @@
 
                 li {
                     @extend .overly;
-                    padding-left : 25px;
-                    font-size    : 16px;
-                    line-height  : 22px;
+                    padding-left: 25px;
+                    font-size: 16px;
+                    line-height: 22px;
                     margin-bottom: 20px;
 
                     &:before {
-                        width     : 12px;
-                        height    : 12px;
+                        width: 12px;
+                        height: 12px;
                         background: $hover-color;
-                        top       : 4px;
+                        top: 4px;
                     }
                 }
             }
@@ -323,7 +368,7 @@
 }
 
 .talent-services {
-    margin          : 30px;
+    margin: 30px;
     background-color: $brand-white;
 
     .section-title {
@@ -332,12 +377,14 @@
 
     .ts-text {
         padding: 60px;
+
         @media #{$small_device} {
             padding: 10px;
         }
+
         h4 {
-            font-size    : 16px;
-            color        : $hover-color;
+            font-size: 16px;
+            color: $hover-color;
             margin-bottom: 20px;
         }
 
@@ -346,7 +393,7 @@
         }
 
         span {
-            display      : block;
+            display: block;
             margin-bottom: 30px;
         }
 
@@ -354,13 +401,13 @@
 }
 
 .service-card.ts-card {
-    max-width : 277px;
-    padding   : 30px;
+    max-width: 277px;
+    padding: 30px;
     margin-top: 30px;
 
     h3 a {
         font-size: 30px;
-        color    : $brand-white;
+        color: $brand-white;
     }
 
     &::before {

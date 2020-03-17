@@ -1,3 +1,45 @@
+.delivered-section{
+    padding: 120px 0;
+    .deliver-heeader{
+        
+        max-width: 260px;
+        position: relative;
+        img{
+            position: absolute;
+            bottom: 20px;
+            left: 0px;
+            color: $brand-white;
+            font-size: 40px;
+            backface-visibility: hidden;
+            animation: jumping_animation 2s ease-in-out 2s infinite alternate;
+            animation-delay: 1s;
+            transition: all 1s ease 3s;
+            user-select: none;
+        }
+        .sub-heading a{
+            color: $brand-white;
+            font-size: 30px;
+            margin-left: 30px;
+            display: block;
+            &:hover {
+                color: $hover-color;
+            }
+        }
+    }
+    .section-title{
+        font-size: 70px;
+        text-transform: capitalize;
+        @media #{$small_device} {
+            font-size: 40px;
+        }
+      
+    }
+  .deliver-inner{
+      p{
+          font-size: 20px;
+      }
+  }
+}
 .deliver-card{
     background: $brand-white;
     padding: 30px;
@@ -12,7 +54,14 @@
         width: 100%;
         margin: 30px 0 20px;
     }
-  
+    &:last-child{
+        background: transparent;
+         border:   8px solid #d6e4ef;
+         box-shadow: none;
+         a, i{
+             color: $brand-white;
+         }
+    }
     .img-wrap{
         @include opacity(0);
         position: absolute;
@@ -25,11 +74,16 @@
         right: 40px;
         @include opacity(0);
         @include transition;
+        i{
+            font-size: 24px;
+        }
     }
     h3 a{
         color: #d6e4ef;
         position: absolute;
-        bottom: 50px;
+        text-transform: uppercase;
+        bottom: 30px;
+      
     }
     &:hover::before{
         @include opacity(1);
@@ -47,45 +101,5 @@
     &:hover .img-wrap{
         @include opacity(1);
     }
-    &:last-child{
-        background: transparent;
-         border:   8px solid #d6e4ef;
-         a, i{
-             color: $brand-white;
-         }
-    }
-}
-.delivered-section{
-    padding: 120px 0;
-    .deliver-heeader{
-        
-        max-width: 260px;
-        position: relative;
-        i{
-            position: absolute;
-            bottom: 20px;
-            left: 0px;
-            color: $brand-white;
-            font-size: 40px;
-        }
-        .sub-heading a{
-            color: $brand-white;
-            font-size: 30px;
-            margin-left: 30px;
-            display: block;
-        }
-    }
-    .section-title{
-        font-size: 70px;
-        text-transform: capitalize;
-        @media #{$small_device} {
-            font-size: 40px;
-        }
-      
-    }
-  .deliver-inner{
-      p{
-          font-size: 20px;
-      }
-  }
+  
 }

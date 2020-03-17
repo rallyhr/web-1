@@ -2,13 +2,21 @@
 
 
   .navbar{
-    padding-top: 60px     ;
+    padding-top: 60px;
+    @media #{$small_device} {
+      background-color: $theme-color;
+      padding-top: 10px;
+    }
     .navbar-nav {
       display: flex;
       align-items: center;
       flex-direction: row;
       justify-content: center;
       float: none;
+      @media #{$small_device} {
+        display: block;
+      }
+    
       li.nav-item {
         a.nav-link {
           color: #4c5258;
@@ -18,6 +26,12 @@
           font-size: 16px;
           font-family: sf-ui-desplay-semibold;
           font-weight: 700;
+          @media #{$tab_device} {
+            padding: 38px 16px;
+          }
+          @media #{$small_device} {
+            padding: 20px;
+          }
           &:hover{
             color: $hover-color;
           }
@@ -99,6 +113,9 @@ a.navbar-brand {
     z-index: 999;
     padding: 0;
     @include transition;
+    @media #{$small_device} {
+      padding: 5px 20px;
+    }
   }
 }
 .header-promo{
@@ -117,6 +134,10 @@ a.navbar-brand {
     font-size: 50px;
     text-transform: capitalize;
     max-width: 175px;
+    @media #{$small_device} {
+      font-size: 35px;
+    }
+  
   }
   .promo-link{
     color: $brand-light;
@@ -133,6 +154,9 @@ a.navbar-brand {
     margin-top: 100px;
     overflow: hidden;
     padding-bottom: 80px;
+    @media #{$small_device} {
+      margin-top: 30px;
+    }
   }
 }
 
@@ -140,9 +164,14 @@ a.navbar-brand {
   h2.promo-title{
     float: none;
     text-transform: capitalize;
+    max-width: 100% ;
   }
   p{
-    max-width: 40%;
+    max-width: 55%;
     font-size: 20px;
+    line-height: 27px;
+    @media #{$small_device} {
+      max-width: 100%;
+    }
   }
 }

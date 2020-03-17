@@ -123,6 +123,9 @@ img, figure {
   font-weight: 900;
   color: #4c5258;
   text-transform: uppercase; }
+  @media only screen and (max-width: 767px) {
+    .section-title {
+      font-size: 35px; } }
 
 .sub-heading {
   font-size: 20px; }
@@ -178,12 +181,19 @@ img, figure {
 
 .navbar {
   padding-top: 60px; }
+  @media only screen and (max-width: 767px) {
+    .navbar {
+      background-color: #e0edf7;
+      padding-top: 10px; } }
   .navbar .navbar-nav {
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: center;
     float: none; }
+    @media only screen and (max-width: 767px) {
+      .navbar .navbar-nav {
+        display: block; } }
     .navbar .navbar-nav li.nav-item a.nav-link {
       color: #4c5258;
       display: block;
@@ -192,6 +202,12 @@ img, figure {
       font-size: 16px;
       font-family: sf-ui-desplay-semibold;
       font-weight: 700; }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .navbar .navbar-nav li.nav-item a.nav-link {
+          padding: 38px 16px; } }
+      @media only screen and (max-width: 767px) {
+        .navbar .navbar-nav li.nav-item a.nav-link {
+          padding: 20px; } }
       .navbar .navbar-nav li.nav-item a.nav-link:hover {
         color: #973694; }
     .navbar .navbar-nav li.nav-item:last-child a.nav-link {
@@ -266,6 +282,9 @@ a.navbar-brand {
     -ms-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out; }
+    @media only screen and (max-width: 767px) {
+      .main-menu.sticky {
+        padding: 5px 20px; } }
 
 .header-promo {
   padding: 135px 0px 0; }
@@ -281,6 +300,9 @@ a.navbar-brand {
     font-size: 50px;
     text-transform: capitalize;
     max-width: 175px; }
+    @media only screen and (max-width: 767px) {
+      .header-promo h2.promo-title {
+        font-size: 35px; } }
   .header-promo .promo-link {
     color: #d6e4ef;
     font-size: 20px;
@@ -294,14 +316,22 @@ a.navbar-brand {
     margin-top: 100px;
     overflow: hidden;
     padding-bottom: 80px; }
+    @media only screen and (max-width: 767px) {
+      .header-promo .hp-wrap {
+        margin-top: 30px; } }
 
 .platform-promo h2.promo-title, .full-promo h2.promo-title {
   float: none;
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  max-width: 100%; }
 
 .platform-promo p, .full-promo p {
-  max-width: 40%;
-  font-size: 20px; }
+  max-width: 55%;
+  font-size: 20px;
+  line-height: 27px; }
+  @media only screen and (max-width: 767px) {
+    .platform-promo p, .full-promo p {
+      max-width: 100%; } }
 
 .footer {
   background-repeat: no-repeat;
@@ -323,6 +353,9 @@ a.navbar-brand {
   position: relative;
   max-width: 80%;
   margin-left: auto; }
+  @media only screen and (max-width: 767px) {
+    .widget .subscribe-form {
+      max-width: 100%; } }
   .widget .subscribe-form input {
     background-color: #973694;
     border: none;
@@ -367,14 +400,29 @@ a.navbar-brand {
     right: -9%;
     top: 65%;
     transform: translateY(-50%); }
+    @media only screen and (max-width: 767px) {
+      .banner-section .banner-wrap::before {
+        display: none; } }
 
 .banner-text .banner-title {
   font-size: 72px;
   color: #4c5258;
   margin-bottom: 10px; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .banner-text .banner-title {
+      font-size: 55px; } }
+  @media only screen and (max-width: 767px) {
+    .banner-text .banner-title {
+      font-size: 40px; } }
 
 .banner-text p {
   font-size: 40px; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .banner-text p {
+      font-size: 30px; } }
+  @media only screen and (max-width: 767px) {
+    .banner-text p {
+      font-size: 20px; } }
 
 .banner-text img {
   float: right; }
@@ -382,13 +430,30 @@ a.navbar-brand {
 .banner-wrap {
   padding-top: 285px;
   padding-bottom: 100px; }
+  @media only screen and (max-width: 767px) {
+    .banner-wrap {
+      padding-top: 150px;
+      padding-bottom: 180px; } }
   .banner-wrap .banner-promo img {
     margin-top: 35px; }
 
 .service-card {
+  padding: 160px 60px 140px;
+  background: #fff;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   max-width: 520px;
-  padding: 180px 60px 60px;
-  background: #fff; }
+  overflow: hidden; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .service-card {
+      padding: 150px 40px 100px; } }
+  @media only screen and (max-width: 767px) {
+    .service-card {
+      padding: 160px 30px 140px;
+      margin-bottom: 60px; } }
   .service-card::before {
     background: #973694;
     opacity: 0;
@@ -404,7 +469,7 @@ a.navbar-brand {
     left: 0px;
     top: 0px;
     content: "";
-    background: url(../images/components/globe.svg) no-repeat center top;
+    background: url(../images/components/cs.png) no-repeat center top;
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
@@ -416,6 +481,37 @@ a.navbar-brand {
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
     z-index: -1; }
+  .service-card .service-hover {
+    position: absolute;
+    bottom: -35%;
+    left: 10%;
+    width: 65%;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .service-card .service-hover {
+        width: 75%; } }
+    @media only screen and (max-width: 767px) {
+      .service-card .service-hover {
+        max-width: 90%; } }
+    .service-card .service-hover p {
+      visibility: hidden;
+      opacity: 0;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      filter: alpha(opacity=0);
+      margin-top: 50px; }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .service-card .service-hover p {
+          font-size: 14px; } }
+    .service-card .service-hover:hover p {
+      display: block;
+      visibility: visible;
+      opacity: 1;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+      filter: alpha(opacity=100); }
   .service-card a {
     font-size: 50px;
     max-width: 320px;
@@ -425,20 +521,22 @@ a.navbar-brand {
     -ms-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out; }
-  .service-card p {
-    color: #4c5258;
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -ms-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .service-card a {
+        font-size: 32px; } }
+    @media only screen and (max-width: 767px) {
+      .service-card a {
+        font-size: 35px; } }
   .service-card i {
     font-size: 20px;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -ms-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out; }
+    transition: all 0.4s ease-in-out;
+    position: absolute;
+    top: 30px;
+    right: 30px; }
   .service-card:hover::before {
     opacity: 0.95;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
@@ -452,12 +550,33 @@ a.navbar-brand {
   .service-card:hover i {
     color: #fff; }
   .service-card.minus-left {
-    max-width: 364px;
     margin: 0 auto; }
+    .service-card.minus-left::after {
+      background: url(../images/components/buser.svg) no-repeat center right; }
+  .service-card:hover .service-hover {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    bottom: 30px; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .service-card:hover .service-hover {
+        bottom: 10px; } }
+    @media only screen and (max-width: 767px) {
+      .service-card:hover .service-hover {
+        bottom: 10px; } }
+  .service-card:hover .service-hover p {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    margin-top: 0px;
+    visibility: visible; }
 
 .services-section .inner-wrap {
   height: 266px;
   margin-top: -10%; }
+  @media only screen and (max-width: 767px) {
+    .services-section .inner-wrap {
+      height: 120px; } }
   .services-section .inner-wrap span.sub-heading {
     position: absolute;
     transform: rotate(90deg);
@@ -496,6 +615,10 @@ a.navbar-brand {
   position: relative;
   margin: 0 auto;
   padding: 60px 30px; }
+  @media only screen and (max-width: 767px) {
+    .about-s-text {
+      padding: 30px;
+      max-width: 90%; } }
   .about-s-text p {
     font-size: 20px;
     line-height: 30px; }
@@ -507,6 +630,9 @@ a.navbar-brand {
     width: 80%;
     left: -35%;
     height: 140%; }
+    @media only screen and (max-width: 767px) {
+      .about-s-inner::before {
+        display: none; } }
   .about-s-inner p {
     font-size: 16px;
     line-height: 22px;
@@ -563,12 +689,21 @@ a.navbar-brand {
     height: 135%;
     content: "";
     position: absolute; }
+    @media only screen and (max-width: 767px) {
+      .about-talent::after {
+        display: none; } }
   .about-talent .talent-wrap {
     max-width: 70%;
     margin: 0 auto; }
+    @media only screen and (max-width: 767px) {
+      .about-talent .talent-wrap {
+        max-width: 95%; } }
     .about-talent .talent-wrap .talent-txt {
       max-width: 95%;
       padding-bottom: 30px; }
+      @media only screen and (max-width: 767px) {
+        .about-talent .talent-wrap .talent-txt {
+          padding-left: 30px; } }
       .about-talent .talent-wrap .talent-txt p {
         font-size: 20px;
         line-height: 30px;
@@ -591,6 +726,9 @@ a.navbar-brand {
     padding: 60px 60px 30px; }
   .talent-services .ts-text {
     padding: 60px; }
+    @media only screen and (max-width: 767px) {
+      .talent-services .ts-text {
+        padding: 10px; } }
     .talent-services .ts-text h4 {
       font-size: 16px;
       color: #973694;
@@ -633,6 +771,10 @@ a.navbar-brand {
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.03); }
+  @media only screen and (max-width: 767px) {
+    .deliver-card {
+      width: 100%;
+      margin: 30px 0 20px; } }
   .deliver-card .img-wrap {
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -702,6 +844,9 @@ a.navbar-brand {
   .delivered-section .section-title {
     font-size: 70px;
     text-transform: capitalize; }
+    @media only screen and (max-width: 767px) {
+      .delivered-section .section-title {
+        font-size: 40px; } }
   .delivered-section .deliver-inner p {
     font-size: 20px; }
 
@@ -712,6 +857,9 @@ a.navbar-brand {
     position: absolute;
     top: 20%;
     right: 0px; }
+  @media only screen and (max-width: 767px) {
+    .testimonial-section {
+      padding-bottom: 150px; } }
 
 .testimonial-wrap {
   max-width: 95%;
@@ -728,13 +876,31 @@ a.navbar-brand {
 .single-quote .quote-thumb {
   float: left;
   max-width: 245px; }
+  @media only screen and (max-width: 767px) {
+    .single-quote .quote-thumb {
+      float: none; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .single-quote .quote-thumb {
+      max-width: 180px; } }
   .single-quote .quote-thumb img {
     height: 234px; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .single-quote .quote-thumb img {
+        height: 272px; } }
+    @media only screen and (max-width: 767px) {
+      .single-quote .quote-thumb img {
+        height: auto; } }
 
 .single-quote .quote-text {
   background: #973694;
   display: table;
   padding: 80px 80px 30px; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .single-quote .quote-text {
+      padding: 80px 30px 30px; } }
+  @media only screen and (max-width: 767px) {
+    .single-quote .quote-text {
+      padding: 60px 30px; } }
   .single-quote .quote-text::before {
     content: "\f10d";
     display: table;
@@ -761,6 +927,9 @@ a.navbar-brand {
   top: 0;
   z-index: 99999;
   left: 0; }
+  @media only screen and (max-width: 767px) {
+    .owl-dots {
+      display: none; } }
   .owl-dots .owl-dot {
     display: inline-block; }
     .owl-dots .owl-dot span {
@@ -775,20 +944,25 @@ a.navbar-brand {
 
 .pt-wrap {
   position: relative;
-  margin-top: -80px;
+  margin-top: -55px;
   padding: 0px;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  z-index: 4; }
+  .pt-wrap > div {
+    padding: 0px; }
 
 .platform-txt-left {
-  position: relative; }
+  position: relative;
+  max-width: 65%; }
   .platform-txt-left a {
     font-size: 20px;
     color: #fff;
     max-width: 85%; }
     .platform-txt-left a i {
       position: absolute;
-      right: 0px;
-      top: 10px; }
+      right: -70px;
+      top: 0px;
+      font-size: 40px; }
 
 .platform-txt p {
   font-size: 18px;
@@ -804,6 +978,10 @@ a.navbar-brand {
     display: inline-block;
     text-align: right;
     border: none; }
+    @media only screen and (max-width: 767px) {
+      .platforms-tab .nav {
+        text-align: left;
+        margin-bottom: 50px; } }
     .platforms-tab .nav .nav-link {
       display: block;
       font-family: sf-ui-desplay-black;
@@ -816,6 +994,9 @@ a.navbar-brand {
   .platforms-tab .tab-content {
     background: #fff;
     padding: 60px; }
+    @media only screen and (max-width: 767px) {
+      .platforms-tab .tab-content {
+        padding: 30px; } }
     .platforms-tab .tab-content img {
       margin-bottom: 30px;
       display: block; }
@@ -826,6 +1007,9 @@ a.navbar-brand {
 
 .about-txt {
   padding: 60px; }
+  @media only screen and (max-width: 767px) {
+    .about-txt {
+      padding: 30px; } }
   .about-txt h3 {
     margin-bottom: 30px; }
   .about-txt a {
@@ -842,7 +1026,10 @@ a.navbar-brand {
       top: 10px; }
 
 .contact-us {
-  padding: 60px; }
+  padding: 80px 60px 50px; }
+  @media only screen and (max-width: 767px) {
+    .contact-us {
+      padding: 65px 15px 50px; } }
   .contact-us .contact-info {
     max-width: 220px;
     margin-right: auto;
@@ -863,6 +1050,9 @@ form .form-group {
   form .form-group.half-form {
     width: 48%;
     float: left; }
+    @media only screen and (max-width: 767px) {
+      form .form-group.half-form {
+        width: 100%; } }
     form .form-group.half-form + .half-form {
       float: right; }
   form .form-group input, form .form-group textarea, form .form-group select {

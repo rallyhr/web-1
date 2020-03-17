@@ -7,6 +7,10 @@
         top: 20%;
         right: 0px;
     }
+    @media #{$small_device} {
+        padding-bottom: 150px;
+    }
+  
 }
 .testimonial-wrap{
     max-width: 95%;
@@ -27,8 +31,22 @@
     .quote-thumb {
         float    : left;
         max-width: 245px;
+        @media #{$small_device} {
+            float: none;
+        }
+      
+        @media #{$tab_device} {
+            max-width: 180px;
+        }   
         img{
             height: 234px;
+            @media #{$tab_device} {
+                height: 272px;
+            }
+            @media #{$small_device} {
+                height: auto;
+            }
+          
         }
     }
 
@@ -37,6 +55,13 @@
         display   : table;
         padding   : 80px 80px 30px;
         @extend .overly;
+        @media #{$tab_device} {
+            padding: 80px 30px 30px;
+        }
+        @media #{$small_device} {
+            padding: 60px 30px;
+        }
+      
         &::before{
             content: "\f10d";
             display: table;
@@ -68,6 +93,10 @@
     top: 0;
     z-index: 99999;
     left: 0;
+    @media #{$small_device} {
+        display: none
+    }
+  
     .owl-dot{
         display: inline-block;
         span {

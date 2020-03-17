@@ -21,6 +21,10 @@
        position: relative;
        max-width: 80%;
        margin-left: auto;
+       @media #{$small_device} {
+        max-width: 100%;
+    }
+  
        input{
            background-color: $hover-color;
            border: none;

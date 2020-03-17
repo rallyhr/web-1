@@ -1,5 +1,8 @@
 .contact-us{
-    padding: 60px;
+    padding: 80px 60px 50px;
+    @media #{$small_device} {
+        padding: 65px 15px 50px;
+    }
     .contact-info{
         max-width: 220px;
         margin-right: auto;
@@ -25,6 +28,9 @@ form{
         &.half-form{
             width: 48%;
             float: left;
+            @media #{$small_device} {
+                width: 100%;
+            }
             & + .half-form{
                 float: right;
             }

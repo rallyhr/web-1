@@ -40,5 +40,7 @@ $('.platform-carousel').owlCarousel({
     });
 
 
+   
+
 
 })(jQuery);

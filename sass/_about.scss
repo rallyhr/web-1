@@ -7,6 +7,9 @@
 }
 .about-txt{
     padding: 60px;
+    @media #{$small_device} {
+        padding: 30px;
+    }
     h3{
         margin-bottom: 30px;
     }
@@ -26,3 +29,4 @@
         }
     }
 }
+

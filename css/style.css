@@ -90,10 +90,10 @@ img, figure {
   display: table;
   content: ""; }
 
-.overly, .banner-section, .banner-section .banner-wrap, .service-card, .about-s-inner, .about-talent .talent-wrap, .about-talent .talent-wrap .talent-txt ul li, .single-quote .quote-text {
+.overly, .header-promo, .banner-section, .banner-section .banner-wrap, .service-card, .about-service, .about-s-inner, .about-talent, .about-talent .talent-wrap .talent-txt ul li, .single-quote .quote-text {
   position: relative;
   z-index: 1; }
-  .overly::before, .banner-section::before, .banner-section .banner-wrap::before, .service-card::before, .about-s-inner::before, .about-talent .talent-wrap::before, .about-talent .talent-wrap .talent-txt ul li::before, .single-quote .quote-text::before {
+  .overly::before, .header-promo::before, .banner-section::before, .banner-section .banner-wrap::before, .service-card::before, .about-service::before, .about-s-inner::before, .about-talent::before, .about-talent .talent-wrap .talent-txt ul li::before, .single-quote .quote-text::before {
     position: absolute;
     left: 0px;
     top: 0px;
@@ -191,7 +191,7 @@ img, figure {
       padding: 40px 22px;
       font-size: 16px;
       font-family: sf-ui-desplay-semibold;
-      font-weight: 600; }
+      font-weight: 700; }
       .navbar .navbar-nav li.nav-item a.nav-link:hover {
         color: #973694; }
     .navbar .navbar-nav li.nav-item:last-child a.nav-link {
@@ -227,7 +227,8 @@ img, figure {
       .navbar .navbar-nav li.nav-item .dropdown-menu li.nav-item a.nav-link {
         padding: 5px 10px;
         font-size: 15px;
-        color: #fff; }
+        color: #fff;
+        font-weight: normal; }
         .navbar .navbar-nav li.nav-item .dropdown-menu li.nav-item a.nav-link:hover {
           color: #fff; }
     .navbar .navbar-nav li.nav-item.dropdown {
@@ -250,32 +251,6 @@ img, figure {
 a.navbar-brand {
   max-width: 175px; }
 
-.header-promo {
-  padding: 135px 0px 0; }
-  .header-promo h2.promo-title {
-    float: left;
-    font-size: 50px;
-    text-transform: uppercase; }
-  .header-promo .promo-link {
-    color: #d6e4ef;
-    font-size: 20px;
-    text-transform: uppercase;
-    float: right; }
-    .header-promo .promo-link:hover {
-      color: #973694; }
-  .header-promo .hp-wrap {
-    margin-top: 100px;
-    overflow: hidden;
-    padding-bottom: 80px; }
-
-.platform-promo h2.promo-title, .full-promo h2.promo-title {
-  float: none;
-  text-transform: capitalize; }
-
-.platform-promo p, .full-promo p {
-  max-width: 40%;
-  font-size: 20px; }
-
 .main-menu {
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
@@ -291,6 +266,42 @@ a.navbar-brand {
     -ms-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out; }
+
+.header-promo {
+  padding: 135px 0px 0; }
+  .header-promo::before {
+    background: #fff;
+    z-index: -1;
+    width: 96%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 28px; }
+  .header-promo h2.promo-title {
+    float: left;
+    font-size: 50px;
+    text-transform: capitalize;
+    max-width: 175px; }
+  .header-promo .promo-link {
+    color: #d6e4ef;
+    font-size: 20px;
+    text-transform: uppercase;
+    float: right;
+    margin-top: 60px;
+    font-family: sf-ui-desplay-black; }
+    .header-promo .promo-link:hover {
+      color: #973694; }
+  .header-promo .hp-wrap {
+    margin-top: 100px;
+    overflow: hidden;
+    padding-bottom: 80px; }
+
+.platform-promo h2.promo-title, .full-promo h2.promo-title {
+  float: none;
+  text-transform: capitalize; }
+
+.platform-promo p, .full-promo p {
+  max-width: 40%;
+  font-size: 20px; }
 
 .footer {
   background-repeat: no-repeat;
@@ -436,7 +447,9 @@ a.navbar-brand {
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=100); }
-  .service-card:hover a, .service-card:hover p, .service-card:hover i {
+  .service-card:hover a,
+  .service-card:hover p,
+  .service-card:hover i {
     color: #fff; }
   .service-card.minus-left {
     max-width: 364px;
@@ -460,10 +473,27 @@ a.navbar-brand {
       margin-left: 8px;
       display: inline-block; }
 
+.about-service {
+  padding-bottom: 20px; }
+  .about-service::before {
+    background: url(../images/components/globe.svg) no-repeat center right;
+    z-index: 1;
+    opacity: 0.25;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
+    filter: alpha(opacity=25); }
+  .about-service::after {
+    position: absolute;
+    width: 87%;
+    height: 100%;
+    background-color: #fff;
+    content: "";
+    right: 0px;
+    top: 0px;
+    z-index: -1; }
+
 .about-s-text {
   max-width: 70%;
   position: relative;
-  background-color: #fff;
   margin: 0 auto;
   padding: 60px 30px; }
   .about-s-text p {
@@ -476,7 +506,7 @@ a.navbar-brand {
     background: url(../images/banner/abs.png) no-repeat center center/cover;
     width: 80%;
     left: -35%;
-    height: 130%; }
+    height: 140%; }
   .about-s-inner p {
     font-size: 16px;
     line-height: 22px;
@@ -502,7 +532,8 @@ a.navbar-brand {
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=100); }
-  .geo-card.service-card h3, .geo-card.service-card i {
+  .geo-card.service-card h3 a,
+  .geo-card.service-card i {
     font-size: 30px;
     color: #fff; }
   .geo-card:hover span {
@@ -511,25 +542,33 @@ a.navbar-brand {
 .geo-service .white-bg {
   padding: 60px; }
   .geo-service .white-bg .section-title {
-    margin-bottom: 60px; }
+    margin: 60px 0 80px; }
     .geo-service .white-bg .section-title span {
       color: #973694; }
 
 .about-talent {
   position: relative;
   z-index: 1; }
+  .about-talent::before {
+    background-color: #fff;
+    left: auto;
+    right: 0px;
+    width: 87%; }
+  .about-talent::after {
+    background: url(../images/banner/talent-bg.png) no-repeat center right/contain;
+    width: 44%;
+    left: auto;
+    right: 0;
+    top: -16%;
+    height: 135%;
+    content: "";
+    position: absolute; }
   .about-talent .talent-wrap {
     max-width: 70%;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 60px 20px; }
-    .about-talent .talent-wrap::before {
-      background: url(../images/banner/talent-bg.png) no-repeat center right/cover;
-      width: 70%;
-      left: auto;
-      right: -23%; }
+    margin: 0 auto; }
     .about-talent .talent-wrap .talent-txt {
-      max-width: 70%; }
+      max-width: 95%;
+      padding-bottom: 30px; }
       .about-talent .talent-wrap .talent-txt p {
         font-size: 20px;
         line-height: 30px;
@@ -545,32 +584,38 @@ a.navbar-brand {
           background: #973694;
           top: 4px; }
 
-.talent-services .section-title {
-  padding: 60px 60px 30px; }
-
-.talent-services .ts-text {
-  padding: 60px; }
-  .talent-services .ts-text h4 {
-    font-size: 16px;
-    color: #973694;
-    margin-bottom: 20px; }
-  .talent-services .ts-text p {
-    margin-bottom: 25px; }
-  .talent-services .ts-text span {
-    display: block;
-    margin-bottom: 30px; }
+.talent-services {
+  margin: 30px;
+  background-color: #fff; }
+  .talent-services .section-title {
+    padding: 60px 60px 30px; }
+  .talent-services .ts-text {
+    padding: 60px; }
+    .talent-services .ts-text h4 {
+      font-size: 16px;
+      color: #973694;
+      margin-bottom: 20px; }
+    .talent-services .ts-text p {
+      margin-bottom: 25px; }
+    .talent-services .ts-text span {
+      display: block;
+      margin-bottom: 30px; }
 
 .service-card.ts-card {
   max-width: 277px;
   padding: 30px;
   margin-top: 30px; }
-  .service-card.ts-card h3 {
+  .service-card.ts-card h3 a {
     font-size: 30px;
     color: #fff; }
   .service-card.ts-card::before {
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=100); }
+  .service-card.ts-card:hover::after {
+    opacity: 0.2;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+    filter: alpha(opacity=20); }
   .service-card.ts-card i {
     color: #fff; }
 

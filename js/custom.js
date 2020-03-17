@@ -27,7 +27,7 @@ $('.platform-carousel').owlCarousel({
 
     win.on('scroll', function () {
         var scroll = win.scrollTop();
-        if (scroll < 100) {
+        if (scroll < 70) {
             header.removeClass("sticky");
         } else {
             header.addClass("sticky");

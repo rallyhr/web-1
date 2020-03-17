@@ -33,38 +33,45 @@
 
 <body>
     <!-- Header Area Start -->
-    <header class="header-section">
-        <nav class="navbar navbar-expand-lg">
+    <nav class="navbar-expand-lg navbar main-menu fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="images/components/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="services.html" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="nav-item"><a class="nav-link" href="services.html">Global Employment</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="talent-sourching.html">Talent Sourcing
+                                </a></li>
 
-            <div class="container">
-                <a href="index.html" class="navbar-brand"><img src="images/components/logo.png" alt=""></a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                    data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span><i class="fa fa-bars"></i></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="services.html">Service</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="platform.html">Platform</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Start Today</a>
-                        </li>
-                    </ul>
-                </div>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="platform.html">Platform</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Start Today</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
     <!--Header End-->
 
     <!--Promo Start-->
@@ -75,7 +82,7 @@
                     <div class="hp-wrap">
                         <h2 class="promo-title">Talent
                             Sourcing</h2>
-                        <a href="#" class="promo-link">Explore our Services <i class="fa fa-arrow-down"></i></a>
+                        <a href="#" class="promo-link">Explore our Services <i class="fa fa-long-arrow-down"></i></a>
 
                     </div>
                 </div>
@@ -110,8 +117,8 @@
     <!--About Talent End-->
 
     <!--Talent Services Start-->
-    <section class="talent-services section-padding">
-        <div class="container white-bg">
+    <section class="talent-services">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <h2 class="section-title">Our Services</h2>
@@ -155,8 +162,8 @@
                         </p>
                         <div class="service-card ts-card">
                             <i class="fa fa-angle-right"></i>
-                            <h3>Global
-                                Employment</h3>
+                            <h3><a href="#">Global
+                                Employment</a></h3>
 
                         </div>
                     </div>

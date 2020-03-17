@@ -17,7 +17,7 @@
           padding: 40px 22px;
           font-size: 16px;
           font-family: sf-ui-desplay-semibold;
-          font-weight: 600;
+          font-weight: 700;
           &:hover{
             color: $hover-color;
           }
@@ -62,6 +62,7 @@
             padding: 5px 10px;
             font-size: 15px;
             color: $brand-white;
+            font-weight: normal;
             &:hover{
               color: $brand-white;
             }
@@ -91,18 +92,39 @@
 a.navbar-brand {
   max-width: 175px;
 }
+.main-menu{
+  @include transition;
+  &.sticky {
+    background: #e0edf7;
+    z-index: 999;
+    padding: 0;
+    @include transition;
+  }
+}
 .header-promo{
   padding: 135px 0px 0;
+  @extend .overly;
+  &::before{
+    background: $brand-white;
+    z-index: -1;
+    width: 96%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 28px;
+  }
   h2.promo-title{
     float: left;
     font-size: 50px;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    max-width: 175px;
   }
   .promo-link{
     color: $brand-light;
     font-size: 20px;
     text-transform: uppercase;
     float: right;
+    margin-top: 60px;
+    font-family: sf-ui-desplay-black;
     &:hover {
       color: $hover-color;
     }
@@ -122,14 +144,5 @@ a.navbar-brand {
   p{
     max-width: 40%;
     font-size: 20px;
-  }
-}
-.main-menu{
-  @include transition;
-  &.sticky {
-    background: #e0edf7;
-    z-index: 999;
-    padding: 0;
-    @include transition;
   }
 }

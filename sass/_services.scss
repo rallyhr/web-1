@@ -1,9 +1,17 @@
 .service-card {
     @extend .overly;
-    max-width : 470px;
-    padding   : 60px;
+    padding   : 160px 60px 140px;
     background: $brand-white;
-
+    @include transition;
+    max-width: 520px;
+    overflow: hidden;
+    @media #{$tab_device} {
+        padding: 150px 40px 100px;
+    }
+    @media #{$small_device} {
+        padding: 160px 30px 140px;
+        margin-bottom: 60px
+    }
     &::before {
         background: $hover-color;
         @include opacity(0);
@@ -11,125 +19,359 @@
     }
 
     &::after {
-        position: absolute;
-        left    : 0px;
-        top     : 0px;
-        content : "";
-        background: url(../images/components/globe.svg)no-repeat center top;
+        position  : absolute;
+        left      : 0px;
+        top       : 0px;
+        content   : "";
+        background: url(../images/components/cs.png)no-repeat center top;
         @include opacity(0);
-        width: 100%;
+        width : 100%;
         height: 100%;
         @include transition;
         z-index: -1;
 
     }
 
- 
-    h3 {
+    .service-hover{
+        position: absolute;
+        bottom: -35%;
+        left: 10%;
+        width: 65%;
+        @include transition;
+        @media #{$tab_device} {
+            width: 75%;
+        }
+        @media #{$small_device} {
+            max-width: 90%; 
+        }
+        p{
+            visibility: hidden;
+           @include opacity(0);
+           margin-top: 50px;
+           @media #{$tab_device} {
+            font-size: 14px;
+        }
+        }
+        &:hover p{
+            display: block;
+            visibility: visible;
+            @include opacity(1);
+        }
+    }
+    a {
         font-size: 50px;
         max-width: 320px;
         color    : $color;
         @include transition;
+        @media #{$tab_device} {
+            font-size: 32px;
+        }
+        @media #{$small_device} {
+            font-size: 35px;
+        }
     }
-    p{
-        color: $color;
-        @include transition;
-    }
-    i{
+
+    i {
         font-size: 20px;
         @include transition;
+        position: absolute;
+        top: 30px;
+        right: 30px;
     }
+
     &:hover::before {
         @include opacity(.95);
     }
-    &:hover::after{
+
+    &:hover::after {
         @include opacity(1);
     }
-    &:hover h3, &:hover p, &:hover i{
+
+    &:hover a,
+    &:hover p,
+    &:hover i {
         color: $brand-white
     }
-  &.minus-left{
-      margin-left: -10%;
-  }
+
+    &.minus-left {
+        margin   : 0 auto;
+        &::after{
+            background: url(../images/components/buser.svg)no-repeat center right;
+        }
+    }
+   
+    &:hover .service-hover{
+        @include opacity(1);
+        bottom: 30px;
+        @media #{$tab_device} {
+            bottom: 10px;
+        }
+        @media #{$small_device} {
+            bottom: 10px;
+        }
+    }
+    &:hover .service-hover p{
+        @include opacity(1);
+       margin-top: 0px;
+       visibility: visible;
+    }
 }
 
 .services-section {
     .inner-wrap {
         height    : 266px;
         margin-top: -10%;
-
+        @media #{$small_device} {
+            height: 120px;
+        }
         span.sub-heading {
-            position : absolute;
-            transform: rotate(90deg);
-            top      : -40%;
-            color    : #fff;
-            z-index  : 3;
-            cursor   : pointer;
-            font-size: 20px;
+            position      : absolute;
+            transform     : rotate(90deg);
+            top           : -40%;
+            color         : #fff;
+            z-index       : 3;
+            cursor        : pointer;
+            font-size     : 20px;
             text-transform: uppercase;
-            i{
+            font-family   : sf-ui-desplay-black;
+            letter-spacing: 2px;
+
+            i {
                 margin-left: 8px;
-                display: inline-block;
+                display    : inline-block;
             }
         }
     }
 }
 
-.about-s-text{
-    max-width: 70%;
-    position: relative;
-  background-color: $brand-white;
-  margin: 0 auto;
-  padding: 60px 30px;
-  p{
-      font-size: 20px;
-      line-height: 30px;
-  }
+.about-service {
+    padding-bottom: 20px;
+    @extend .overly;
+
+    &::before {
+        background: url(../images/components/globe.svg)no-repeat center right;
+        z-index   : 1;
+        @include opacity(.25);
+    }
+
+    &::after {
+        position        : absolute;
+        width           : 87%;
+        height          : 100%;
+        background-color: $brand-white;
+        content         : "";
+        right           : 0px;
+        top             : 0px;
+        z-index         : -1;
+    }
 }
-.about-s-inner{
+
+.about-s-text {
+    max-width: 70%;
+    position : relative;
+    margin   : 0 auto;
+    padding  : 60px 30px;
+    @media #{$small_device} {
+        padding: 30px;
+        max-width: 90%;
+    }
+  
+
+    p {
+        font-size  : 20px;
+        line-height: 30px;
+    }
+}
+
+.about-s-inner {
     @extend .overly;
     margin-top: 50px;
-    &::before{
+
+    &::before {
         background: url(../images/banner/abs.png)no-repeat center center / cover;
-        width: 80%;
-        left: -35%;
+        width     : 80%;
+        left      : -35%;
+        height    : 140%;
+        @media #{$small_device} {
+            display: none;
+        }
+      
     }
-    p{
-        font-size: 16px;
-        line-height: 22px;
+
+    p {
+        font-size    : 16px;
+        line-height  : 22px;
         margin-bottom: 25px;
     }
 }
-.geo-card{
+
+.geo-card {
     max-width: 277px;
-    margin: 0 auto 60px;
-    h4{
-        font-size: 16px;
-        color: $hover-color;
+    margin   : 0 auto 60px;
+
+    h4 {
+        font-size    : 16px;
+        color        : $hover-color;
         margin-bottom: 20px;
     }
-    span{
-        display: block;
+
+    span {
+        display      : block;
         margin-bottom: 30px;
+        @include transition;
+        transform: translateY(0);
     }
-    &.service-card{
-        &::before{
+
+    &.service-card {
+        &::before {
             @include opacity(1);
         }
-        h3, i{
+
+        h3 a,
+        i {
             font-size: 30px;
-            color: $brand-white;
+            color    : $brand-white;
         }
 
     }
+
+    &:hover span {
+        transform: translateY(-10px);
+    }
 }
-.geo-service .white-bg{
+
+.geo-service .white-bg {
     padding: 60px;
-    .section-title{
-        margin-bottom: 60px;
-        span{
+
+    .section-title {
+        margin: 60px 0 80px;
+
+        span {
             color: $hover-color;
         }
     }
 
+}
+
+.about-talent {
+    position: relative;
+    z-index : 1;
+    @extend .overly;
+    &::before {
+        background-color: $brand-white;
+        left            : auto;
+        right           : 0px;
+        width           : 87%;
+    }
+
+    &::after {
+        background: url(../images/banner/talent-bg.png)no-repeat center right / contain;
+        width: 44%;
+        left: auto;
+        right: 0;
+        top: -16%;
+        height: 135%;
+        content: "";
+        position: absolute;
+        @media #{$small_device} {
+            display: none;
+        }
+      
+
+    }
+
+    .talent-wrap {
+        max-width: 70%;
+        margin   : 0 auto;
+        @media #{$small_device} {
+            max-width: 95%;
+        }
+        .talent-txt {
+            max-width: 95%;
+            padding-bottom: 30px;
+            @media #{$small_device} {
+                padding-left: 30px;
+            }
+            p {
+                font-size  : 20px;
+                line-height: 30px;
+                padding    : 30px 0px;
+            }
+
+            ul {
+                @extend .list-clear;
+
+                li {
+                    @extend .overly;
+                    padding-left : 25px;
+                    font-size    : 16px;
+                    line-height  : 22px;
+                    margin-bottom: 20px;
+
+                    &:before {
+                        width     : 12px;
+                        height    : 12px;
+                        background: $hover-color;
+                        top       : 4px;
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+.talent-services {
+    margin          : 30px;
+    background-color: $brand-white;
+
+    .section-title {
+        padding: 60px 60px 30px;
+    }
+
+    .ts-text {
+        padding: 60px;
+        @media #{$small_device} {
+            padding: 10px;
+        }
+        h4 {
+            font-size    : 16px;
+            color        : $hover-color;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 25px;
+        }
+
+        span {
+            display      : block;
+            margin-bottom: 30px;
+        }
+
+    }
+}
+
+.service-card.ts-card {
+    max-width : 277px;
+    padding   : 30px;
+    margin-top: 30px;
+
+    h3 a {
+        font-size: 30px;
+        color    : $brand-white;
+    }
+
+    &::before {
+        @include opacity(1);
+    }
+
+    &:hover::after {
+        @include opacity(.2)
+    }
+
+    i {
+        color: $brand-white
+    }
 }

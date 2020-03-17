@@ -1,0 +1,32 @@
+.header-promo.full-promo  {
+   p{
+       max-width: 75%;
+       line-height: 27px;
+   }
+
+}
+.about-txt{
+    padding: 60px;
+    @media #{$small_device} {
+        padding: 30px;
+    }
+    h3{
+        margin-bottom: 30px;
+    }
+    a{
+        font-size: 30px;
+        color: $brand-white;
+        max-width: 41%;
+        position: relative;
+        display: block;
+        &:hover{
+            color: $hover-color;
+        }
+        i{
+            position: absolute;
+            right: -30px;
+            top: 10px;
+        }
+    }
+}
+

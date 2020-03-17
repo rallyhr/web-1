@@ -7,36 +7,27 @@
    $('.testimonial-wrap').owlCarousel({
     items: 1,
     loop:true,
-    autoplay: false,
+    autoplay: true,
     autoplayTimeout:3000,
     dots: true
 });
 
-
-    $("a[rel^='prettyPhoto']").prettyPhoto({
-        default_width: 750,
-        default_height: 375,
-    });
-
-
-    $('.pager-img').on('click', function () {
-        $('.middle-item').attr('src', $(this).attr('src'));
-    });
-
-    //Scroll spy
-    $('body').scrollspy({
-     target: '.navbar',
-     offset: 90,
-      });
+$('.platform-carousel').owlCarousel({
+    items: 1,
+    loop:true,
+    autoplay: true,
+    autoplayTimeout:3000,
+    dots: false
+});
     /* =================================
             ===  Sticky Menu       ===
             =================================== */
-    var header = $('.main-menu-wraps');
+    var header = $('.main-menu');
     var win = $(window);
 
     win.on('scroll', function () {
         var scroll = win.scrollTop();
-        if (scroll < 100) {
+        if (scroll < 70) {
             header.removeClass("sticky");
         } else {
             header.addClass("sticky");
@@ -48,6 +39,8 @@
         scrollDistance: 300,
     });
 
+
+   
 
 
 })(jQuery);

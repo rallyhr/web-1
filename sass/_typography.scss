@@ -6,7 +6,11 @@
 
   @font-face {
     font-family: sf-ui-desplay-regular;
-    src: url(../fonts/sf-ui-display-light.woff);
+    src: url(../fonts/sf-ui-display-regular.woff);
+}
+@font-face {
+  font-family: sf-ui-desplay-semibold;
+  src: url(../fonts/sf-ui-display-regular.woff);
 }
 
 @font-face {
@@ -25,6 +29,12 @@ body {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media #{$desk_device} {
+  .container{
+    max-width: 1030px;
+  }
 }
 
 h1,

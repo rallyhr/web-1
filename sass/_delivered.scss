@@ -4,14 +4,21 @@
     width: 27.33%;
     float: left;
     margin: 20px;
+    position: relative;
     min-height: 235px;
     @include transition;
-    @extend .overly;
-    box-shadow:  0 8px 14px 0 rgba(0, 0, 0, 0.17);
-    &::before{
-        background: url(../images/components/dollar.svg)no-repeat right top;
+    box-shadow:  0 8px 14px 0 rgba(0, 0, 0, 0.03);
+    @media #{$small_device} {
+        width: 100%;
+        margin: 30px 0 20px;
+    }
+  
+    .img-wrap{
         @include opacity(0);
-        @include transition();
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        @include transition;
     }
     .more{
         position: absolute;
@@ -19,7 +26,7 @@
         @include opacity(0);
         @include transition;
     }
-    h3{
+    h3 a{
         color: #d6e4ef;
         position: absolute;
         bottom: 50px;
@@ -37,16 +44,48 @@
         @include opacity(1);
         right: 30px;
     }
+    &:hover .img-wrap{
+        @include opacity(1);
+    }
+    &:last-child{
+        background: transparent;
+         border:   8px solid #d6e4ef;
+         a, i{
+             color: $brand-white;
+         }
+    }
 }
 .delivered-section{
     padding: 120px 0;
+    .deliver-heeader{
+        
+        max-width: 260px;
+        position: relative;
+        i{
+            position: absolute;
+            bottom: 20px;
+            left: 0px;
+            color: $brand-white;
+            font-size: 40px;
+        }
+        .sub-heading a{
+            color: $brand-white;
+            font-size: 30px;
+            margin-left: 30px;
+            display: block;
+        }
+    }
     .section-title{
         font-size: 70px;
+        text-transform: capitalize;
+        @media #{$small_device} {
+            font-size: 40px;
+        }
+      
     }
-    .sub-heading{
-        color: $brand-white;
-        font-size: 30px;
-        max-width: 260px;
-
-    }
+  .deliver-inner{
+      p{
+          font-size: 20px;
+      }
+  }
 }

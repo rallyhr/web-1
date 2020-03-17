@@ -43,6 +43,9 @@
   font-weight: 900;
   color: $color;
   text-transform: uppercase;
+  @media #{$small_device} {
+    font-size: 35px;
+  }
 }
 .sub-heading{
   font-size: 20px;
@@ -81,7 +84,7 @@
 #scrollUp {
   width: 40px;
   height: 40px;
-  background: $theme-color;
+  background: $hover-color;
   display: block;
   bottom: 60px;
   right: 30px;

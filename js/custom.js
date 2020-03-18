@@ -9,7 +9,7 @@
     loop:true,
     autoplay: true,
     autoplayTimeout:3000,
-    dots: true
+    dots: true,
 });
 
 $('.platform-carousel').owlCarousel({
@@ -18,6 +18,7 @@ $('.platform-carousel').owlCarousel({
     autoplay: true,
     dots: false,
     animateOut: 'fadeOut',
+    animateIn: 'fadeIn',
 });
     /* =================================
             ===  Sticky Menu       ===

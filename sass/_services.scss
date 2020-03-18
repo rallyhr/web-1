@@ -112,8 +112,8 @@
 
     &.minus-left {
         margin: 0 auto;
-        min-height: 364px;
-        max-width: 360px;
+        height: 364px;
+        width: 360px;
         @include transition;
         .service-hover {
             width: 73%;

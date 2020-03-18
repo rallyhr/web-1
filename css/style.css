@@ -90,10 +90,10 @@ img, figure {
   display: table;
   content: ""; }
 
-.overly, .header-promo, .banner-section, .banner-section .banner-wrap, .service-card, .about-s-inner, .about-talent, .about-talent .talent-wrap .talent-txt ul li, .delivered-section, .single-quote .quote-text {
+.overly, .header-promo, .banner-section, .banner-section .banner-wrap, .service-card, .about-service, .about-s-text, .about-talent, .about-talent .talent-wrap .talent-txt ul li, .delivered-section, .single-quote .quote-text {
   position: relative;
   z-index: 1; }
-  .overly::before, .header-promo::before, .banner-section::before, .banner-section .banner-wrap::before, .service-card::before, .about-s-inner::before, .about-talent::before, .about-talent .talent-wrap .talent-txt ul li::before, .delivered-section::before, .single-quote .quote-text::before {
+  .overly::before, .header-promo::before, .banner-section::before, .banner-section .banner-wrap::before, .service-card::before, .about-service::before, .about-s-text::before, .about-talent::before, .about-talent .talent-wrap .talent-txt ul li::before, .delivered-section::before, .single-quote .quote-text::before {
     position: absolute;
     left: 0px;
     top: 0px;
@@ -454,14 +454,14 @@ a.navbar-brand {
     margin-top: 35px; }
 
 .service-card {
-  min-height: 455px;
+  height: 455px;
   background: #fff;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  max-width: 520px;
+  width: 500px;
   overflow: hidden; }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .service-card {
@@ -489,7 +489,7 @@ a.navbar-brand {
     left: 0px;
     top: 0px;
     content: "";
-    background: url(../images/components/cs.png) no-repeat center top;
+    background: url(../images/components/cs.png) no-repeat center top/contain;
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
@@ -506,28 +506,24 @@ a.navbar-brand {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=100); }
   .service-card .service-hover {
+    max-width: 300px;
     position: absolute;
-    bottom: -58%;
+    bottom: -27%;
     left: 10%;
-    width: 65%;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -ms-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out; }
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
-      .service-card .service-hover {
-        width: 75%; } }
-    @media only screen and (max-width: 767px) {
-      .service-card .service-hover {
-        max-width: 90%; } }
     .service-card .service-hover p {
-      padding-top: 70px;
       -webkit-transition: all 0.4s ease-in-out;
       -moz-transition: all 0.4s ease-in-out;
       -ms-transition: all 0.4s ease-in-out;
       -o-transition: all 0.4s ease-in-out;
-      transition: all 0.4s ease-in-out; }
+      transition: all 0.4s ease-in-out;
+      opacity: 0;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      filter: alpha(opacity=0); }
       @media only screen and (min-width: 768px) and (max-width: 991px) {
         .service-card .service-hover p {
           font-size: 14px; } }
@@ -555,7 +551,8 @@ a.navbar-brand {
     transition: all 0.4s ease-in-out;
     position: absolute;
     top: 30px;
-    right: 30px; }
+    right: 30px;
+    color: #973694; }
   .service-card:hover::before {
     opacity: 0.95;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
@@ -580,13 +577,11 @@ a.navbar-brand {
     -ms-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out; }
-    .service-card.minus-left .service-hover {
-      width: 73%;
-      bottom: -50%; }
     .service-card.minus-left::after {
-      background: url(../images/components/buser.svg) no-repeat center right; }
+      background: url(../images/components/buser.svg) no-repeat center right/contain; }
     .service-card.minus-left:hover {
-      max-width: 100%; }
+      height: 455px;
+      width: 500px; }
   .service-card:hover .service-hover,
   .service-card.active .service-hover {
     opacity: 1;
@@ -606,7 +601,6 @@ a.navbar-brand {
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=100);
-    padding-top: 30px;
     visibility: visible; }
   .service-card.active::before {
     opacity: 1;
@@ -637,43 +631,41 @@ a.navbar-brand {
       transform: rotate(-90deg); }
 
 .about-service {
-  padding-bottom: 20px;
-  background-color: #f8fcff;
+  padding-bottom: 22px;
   background-repeat: no-repeat;
   background-position: top right; }
+  .about-service::before {
+    background: url(../images/banner/abs.png) no-repeat left bottom;
+    z-index: 2;
+    top: 60px;
+    width: 48%;
+    background-size: contain; }
   .about-service::after {
     position: absolute;
-    width: 87%;
-    height: 100%;
-    background-color: #fff;
+    right: 0%;
+    background: url(../images/components/newglobe.svg) no-repeat top right;
     content: "";
-    right: 0px;
     top: 0px;
-    z-index: -1; }
+    width: 447px;
+    height: 390px; }
 
 .about-s-text {
-  max-width: 70%;
-  position: relative;
-  margin: 0 auto;
-  padding: 60px 30px; }
-  @media only screen and (max-width: 767px) {
-    .about-s-text {
-      padding: 30px;
-      max-width: 90%; } }
+  padding: 60px 0; }
+  .about-s-text::before {
+    background: #f8fcff;
+    width: 117.7%;
+    left: -30px; }
+  .about-s-text > p {
+    max-width: 75%; }
+    @media only screen and (max-width: 767px) {
+      .about-s-text > p {
+        max-width: 90%; } }
   .about-s-text p {
     font-size: 20px;
     line-height: 30px; }
 
 .about-s-inner {
   margin-top: 50px; }
-  .about-s-inner::before {
-    background: url(../images/banner/abs.png) no-repeat center center/cover;
-    width: 80%;
-    left: -35%;
-    height: 140%; }
-    @media only screen and (max-width: 767px) {
-      .about-s-inner::before {
-        display: none; } }
   .about-s-inner p {
     font-size: 16px;
     line-height: 22px;
@@ -681,7 +673,13 @@ a.navbar-brand {
 
 .geo-card {
   max-width: 277px;
-  margin: 0 auto 60px; }
+  margin: 0 auto 60px;
+  height: 244px; }
+  .geo-card .service-hover {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    bottom: 30px; }
   .geo-card h4 {
     font-size: 16px;
     color: #973694;
@@ -699,6 +697,8 @@ a.navbar-brand {
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=100); }
+  .geo-card.service-card::after {
+    background: url(../images/components/buser.svg) no-repeat center right/contain; }
   .geo-card.service-card h3 a,
   .geo-card.service-card i {
     font-size: 30px;
@@ -783,7 +783,8 @@ a.navbar-brand {
 .service-card.ts-card {
   max-width: 277px;
   padding: 30px;
-  margin-top: 30px; }
+  margin-top: 30px;
+  height: 231px; }
   .service-card.ts-card h3 a {
     font-size: 30px;
     color: #fff; }
@@ -791,10 +792,6 @@ a.navbar-brand {
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=100); }
-  .service-card.ts-card:hover::after {
-    opacity: 0.2;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
-    filter: alpha(opacity=20); }
   .service-card.ts-card i {
     color: #fff; }
 
@@ -1045,7 +1042,8 @@ a.navbar-brand {
       display: block;
       font-family: sf-ui-desplay-black;
       border: none;
-      max-width: 90%; }
+      max-width: 90%;
+      text-transform: uppercase; }
       .platforms-tab .nav .nav-link.active {
         color: #973694;
         background-color: transparent;
@@ -1079,7 +1077,7 @@ a.navbar-brand {
     display: block; }
     .about-txt a:hover {
       color: #973694; }
-    .about-txt a i {
+    .about-txt a img {
       position: absolute;
       right: -30px;
       top: 10px; }

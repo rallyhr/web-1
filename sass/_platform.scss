@@ -48,6 +48,7 @@
             font-family: sf-ui-desplay-black;
             border: none;
             max-width: 90%;
+            text-transform: uppercase;
             &.active {
                 color: $hover-color;
                 background-color: transparent;

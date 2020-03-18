@@ -1,7 +1,10 @@
 .delivered-section{
     padding: 120px 0;
+    @extend .overly;
+    &::before{
+        background: url(../images/components//pot.png)no-repeat top right;
+    }
     .deliver-heeader{
-        
         max-width: 260px;
         position: relative;
         img{
@@ -10,11 +13,6 @@
             left: 0px;
             color: $brand-white;
             font-size: 40px;
-            backface-visibility: hidden;
-            animation: jumping_animation 2s ease-in-out 2s infinite alternate;
-            animation-delay: 1s;
-            transition: all 1s ease 3s;
-            user-select: none;
         }
         .sub-heading a{
             color: $brand-white;
@@ -35,6 +33,11 @@
       
     }
   .deliver-inner{
+      margin-bottom: 50px;
+      .section-title{
+          margin-bottom: 0px;
+          line-height: 1;
+      }
       p{
           font-size: 20px;
       }
@@ -45,7 +48,8 @@
     padding: 30px;
     width: 27.33%;
     float: left;
-    margin: 20px;
+    margin-right: 28px;
+    margin-bottom: 28px;
     position: relative;
     min-height: 235px;
     @include transition;
@@ -83,7 +87,11 @@
         position: absolute;
         text-transform: uppercase;
         bottom: 30px;
-      
+        span{
+            font-size: 18px;
+            text-transform: lowercase;
+            display: block;
+        }
     }
     &:hover::before{
         @include opacity(1);

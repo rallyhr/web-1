@@ -113,7 +113,8 @@
     &.minus-left {
         margin: 0 auto;
         min-height: 364px;
-
+        max-width: 360px;
+        @include transition;
         .service-hover {
             width: 73%;
             bottom: -50%;
@@ -122,7 +123,9 @@
         &::after {
             background: url(../images/components/buser.svg)no-repeat center right;
         }
-
+        &:hover{
+            max-width: 100%;
+        }
     }
 
     &:hover .service-hover,
@@ -183,14 +186,9 @@
 
 .about-service {
     padding-bottom: 20px;
-    @extend .overly;
-
-    &::before {
-        background: url(../images/components/globe.svg)no-repeat center right;
-        z-index: 1;
-        @include opacity(.25);
-    }
-
+    background-color: #f8fcff;
+    background-repeat: no-repeat;
+    background-position: top right;
     &::after {
         position: absolute;
         width: 87%;

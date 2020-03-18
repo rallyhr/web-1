@@ -90,10 +90,10 @@ img, figure {
   display: table;
   content: ""; }
 
-.overly, .header-promo, .banner-section, .banner-section .banner-wrap, .service-card, .about-service, .about-s-inner, .about-talent, .about-talent .talent-wrap .talent-txt ul li, .single-quote .quote-text {
+.overly, .header-promo, .banner-section, .banner-section .banner-wrap, .service-card, .about-s-inner, .about-talent, .about-talent .talent-wrap .talent-txt ul li, .delivered-section, .single-quote .quote-text {
   position: relative;
   z-index: 1; }
-  .overly::before, .header-promo::before, .banner-section::before, .banner-section .banner-wrap::before, .service-card::before, .about-service::before, .about-s-inner::before, .about-talent::before, .about-talent .talent-wrap .talent-txt ul li::before, .single-quote .quote-text::before {
+  .overly::before, .header-promo::before, .banner-section::before, .banner-section .banner-wrap::before, .service-card::before, .about-s-inner::before, .about-talent::before, .about-talent .talent-wrap .talent-txt ul li::before, .delivered-section::before, .single-quote .quote-text::before {
     position: absolute;
     left: 0px;
     top: 0px;
@@ -573,12 +573,20 @@ a.navbar-brand {
     color: #fff; }
   .service-card.minus-left {
     margin: 0 auto;
-    min-height: 364px; }
+    min-height: 364px;
+    max-width: 360px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; }
     .service-card.minus-left .service-hover {
       width: 73%;
       bottom: -50%; }
     .service-card.minus-left::after {
       background: url(../images/components/buser.svg) no-repeat center right; }
+    .service-card.minus-left:hover {
+      max-width: 100%; }
   .service-card:hover .service-hover,
   .service-card.active .service-hover {
     opacity: 1;
@@ -629,13 +637,10 @@ a.navbar-brand {
       transform: rotate(-90deg); }
 
 .about-service {
-  padding-bottom: 20px; }
-  .about-service::before {
-    background: url(../images/components/globe.svg) no-repeat center right;
-    z-index: 1;
-    opacity: 0.25;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
-    filter: alpha(opacity=25); }
+  padding-bottom: 20px;
+  background-color: #f8fcff;
+  background-repeat: no-repeat;
+  background-position: top right; }
   .about-service::after {
     position: absolute;
     width: 87%;
@@ -795,6 +800,8 @@ a.navbar-brand {
 
 .delivered-section {
   padding: 120px 0; }
+  .delivered-section::before {
+    background: url(../images/components//pot.png) no-repeat top right; }
   .delivered-section .deliver-heeader {
     max-width: 260px;
     position: relative; }
@@ -803,12 +810,7 @@ a.navbar-brand {
       bottom: 20px;
       left: 0px;
       color: #fff;
-      font-size: 40px;
-      backface-visibility: hidden;
-      animation: jumping_animation 2s ease-in-out 2s infinite alternate;
-      animation-delay: 1s;
-      transition: all 1s ease 3s;
-      user-select: none; }
+      font-size: 40px; }
     .delivered-section .deliver-heeader .sub-heading a {
       color: #fff;
       font-size: 30px;
@@ -822,15 +824,21 @@ a.navbar-brand {
     @media only screen and (max-width: 767px) {
       .delivered-section .section-title {
         font-size: 40px; } }
-  .delivered-section .deliver-inner p {
-    font-size: 20px; }
+  .delivered-section .deliver-inner {
+    margin-bottom: 50px; }
+    .delivered-section .deliver-inner .section-title {
+      margin-bottom: 0px;
+      line-height: 1; }
+    .delivered-section .deliver-inner p {
+      font-size: 20px; }
 
 .deliver-card {
   background: #fff;
   padding: 30px;
   width: 27.33%;
   float: left;
-  margin: 20px;
+  margin-right: 28px;
+  margin-bottom: 28px;
   position: relative;
   min-height: 235px;
   -webkit-transition: all 0.4s ease-in-out;
@@ -879,6 +887,10 @@ a.navbar-brand {
     position: absolute;
     text-transform: uppercase;
     bottom: 30px; }
+    .deliver-card h3 a span {
+      font-size: 18px;
+      text-transform: lowercase;
+      display: block; }
   .deliver-card:hover::before {
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";

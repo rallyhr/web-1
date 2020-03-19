@@ -15,6 +15,10 @@
   src: url(../fonts/sf-ui-display-regular.woff); }
 
 @font-face {
+  font-family: sf-ui-desplay-heavy;
+  src: url(../fonts/sf-ui-display-black.woff); }
+
+@font-face {
   font-family: sf-ui-desplay-black;
   src: url(../fonts/sf-ui-display-black.woff); }
 
@@ -370,7 +374,8 @@ a.navbar-brand {
     border: none;
     text-align: left;
     color: #fff;
-    padding: 19px; }
+    padding: 19px;
+    font-family: sf-ui-desplay-heavy; }
     .widget .subscribe-form input::placeholder {
       color: #fff; }
   .widget .subscribe-form button {
@@ -825,7 +830,8 @@ a.navbar-brand {
     .talent-services .ts-text h4 {
       font-size: 16px;
       color: #973694;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      font-family: sf-ui-desplay-heavy; }
     .talent-services .ts-text p {
       margin-bottom: 25px; }
     .talent-services .ts-text span {

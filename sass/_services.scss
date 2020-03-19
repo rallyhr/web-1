@@ -175,13 +175,17 @@
     padding-bottom: 22px;
     background-repeat: no-repeat;
     background-position: top right;
+    margin-top: -50px;
     @extend .overly;
     &::before{
         background: url(../images/banner/abs.png) no-repeat left bottom;
         z-index: 2;
-        top: 60px;
-        width: 48%;
-        background-size: contain;    
+        top: auto;
+        width: 49%;
+        background-size: contain;
+        height: 86%;
+        bottom: -10%;
+        left: -65px; 
     }
     &::after{
         position: absolute;
@@ -191,30 +195,28 @@
         top: 0px;
         width: 447px;
         height: 390px;
+        z-index: 2;
     }
 }
 
 .about-s-text {
-    padding: 60px 0;
+    padding: 50px 0;
     @extend .overly;
 
     &::before{
         background: #f8fcff;
-     width: 117.7%;;
+     width: 247.7%;;
         left: -30px;
     } 
   
    >  p{
-        
+        margin-left: 20px;
     max-width: 75%;
     @media #{$small_device} {
 
         max-width: 90%;
     }
     }
-   
-
-
     p {
         font-size: 20px;
         line-height: 30px;
@@ -226,7 +228,8 @@
     p {
         font-size: 16px;
         line-height: 22px;
-        margin-bottom: 25px;
+        max-width: 85%;
+        margin: 0 auto 25px;
     }
 }
 
@@ -258,12 +261,15 @@
         &::after{
             background: url(../images/components/buser.svg) no-repeat center right / contain;
         }
+        .service-hover{
+        max-width: 160px;
+        }
         h3 a,
         i {
             font-size: 30px;
             color: $brand-white;
         }
-
+        
     }
 
     &:hover span {
@@ -290,7 +296,7 @@
     @extend .overly;
 
     &::before {
-        background-color: $brand-white;
+        background-color: #f8fcff;
         left: auto;
         right: 0px;
         width: 87%;
@@ -315,7 +321,7 @@
 
     .talent-wrap {
         max-width: 70%;
-        margin: 0 auto;
+        margin: -50px auto 0;
 
         @media #{$small_device} {
             max-width: 95%;

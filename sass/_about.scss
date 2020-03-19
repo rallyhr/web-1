@@ -1,7 +1,18 @@
+.about-us{
+    @extend .overly;
+    margin-top: 28px    ;
+    &::before{
+        background: $brand-white;
+        width: 10%;
+        left: auto;
+        right: 26px;
+    }
+}
 .header-promo.full-promo  {
    p{
-       max-width: 75%;
+       max-width: 85%;
        line-height: 27px;
+       margin-top: 20px;
    }
 
 }

@@ -12,6 +12,11 @@
     dots: true,
 });
 
+$('.minus-left').on('mouseenter',function(){
+    $('.sos').removeClass('active');
+    return false
+});
+
 $('.platform-carousel').owlCarousel({
     items: 1,
     loop:true,

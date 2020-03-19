@@ -452,15 +452,16 @@ a.navbar-brand {
   .banner-wrap .banner-promo img {
     margin-top: 35px; }
 
+.services-section {
+  min-height: 690px; }
+
 .service-card {
-  height: 455px;
   background: #fff;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  width: 500px;
   overflow: hidden; }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .service-card {
@@ -469,6 +470,9 @@ a.navbar-brand {
     .service-card {
       padding: 160px 30px 140px;
       margin-bottom: 60px; } }
+  .service-card.active {
+    width: 576px;
+    height: 508px; }
   .service-card::before {
     background: #973694;
     opacity: 0;
@@ -505,7 +509,7 @@ a.navbar-brand {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=100); }
   .service-card .service-hover {
-    max-width: 300px;
+    max-width: 364px;
     position: absolute;
     bottom: -27%;
     left: 10%;
@@ -568,7 +572,7 @@ a.navbar-brand {
   .service-card.active i {
     color: #fff; }
   .service-card.minus-left {
-    margin: 0 auto;
+    margin-left: auto;
     height: 364px;
     width: 360px;
     -webkit-transition: all 0.4s ease-in-out;
@@ -579,8 +583,8 @@ a.navbar-brand {
     .service-card.minus-left::after {
       background: url(../images/components/buser.svg) no-repeat center right/contain; }
     .service-card.minus-left:hover {
-      height: 455px;
-      width: 500px; }
+      width: 576px;
+      height: 508px; }
   .service-card:hover .service-hover,
   .service-card.active .service-hover {
     opacity: 1;
@@ -731,11 +735,11 @@ a.navbar-brand {
     width: 87%; }
   .about-talent::after {
     background: url(../images/banner/talent-bg.png) no-repeat center right/contain;
-    width: 44%;
+    width: 48%;
     left: auto;
     right: 0;
-    top: -16%;
-    height: 135%;
+    top: 0;
+    height: 100%;
     content: "";
     position: absolute; }
     @media only screen and (max-width: 767px) {
@@ -748,8 +752,8 @@ a.navbar-brand {
       .about-talent .talent-wrap {
         max-width: 95%; } }
     .about-talent .talent-wrap .talent-txt {
-      max-width: 95%;
-      padding-bottom: 30px; }
+      max-width: 90%;
+      padding: 40px 0; }
       @media only screen and (max-width: 767px) {
         .about-talent .talent-wrap .talent-txt {
           padding-left: 30px; } }
@@ -761,7 +765,7 @@ a.navbar-brand {
         padding-left: 25px;
         font-size: 16px;
         line-height: 22px;
-        margin-bottom: 20px; }
+        margin-bottom: 15px; }
         .about-talent .talent-wrap .talent-txt ul li:before {
           width: 12px;
           height: 12px;
@@ -770,11 +774,12 @@ a.navbar-brand {
 
 .talent-services {
   margin: 30px;
-  background-color: #fff; }
+  background-color: #fff;
+  padding-bottom: 90px; }
   .talent-services .section-title {
-    padding: 60px 60px 30px; }
+    padding: 60px 0px 30px; }
   .talent-services .ts-text {
-    padding: 60px; }
+    max-width: 94%; }
     @media only screen and (max-width: 767px) {
       .talent-services .ts-text {
         padding: 10px; } }
@@ -791,8 +796,9 @@ a.navbar-brand {
 .service-card.ts-card {
   max-width: 277px;
   padding: 30px;
-  margin-top: 30px;
-  height: 231px; }
+  margin-top: 80px;
+  height: 231px;
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.17); }
   .service-card.ts-card h3 a {
     font-size: 30px;
     color: #fff; }

@@ -12,16 +12,19 @@
     dots: true,
 });
 
-// $('.minus-left').on('hover',function(){
-//     $('.sos')
-//     .removeClass('active')
-//     .css({'height': ' 360px', 'width' : '360px'},10000 )
-// });
-// $('.minus-left').on('hover',function(){
-//     $('.sos')
-//     .addClass('active')
-//     .css({'height': ' 640px', 'width' : '570px'})
-// });
+$('.minus-left').on('mouseenter',function(e){
+    $('.sos')
+    .removeClass('active')
+    .css({'height': '360px', 'width' : '360px'} );
+});
+
+$('.minus-left').on('mouseleave',function(e){
+    $('.sos')
+    .addClass('active')
+    .css({'height': '508px', 'width' : '576px'});
+});
+
+
 
 $('.platform-carousel').owlCarousel({
     items: 1,

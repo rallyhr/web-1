@@ -1,5 +1,13 @@
 .contact-us{
     padding: 80px 60px 50px;
+    @extend .overly;
+    &::before{
+        background: $brand-white;
+        width: 10%;
+        left: auto;
+        right: 26px;
+        height: 70%;
+    }
     @media #{$small_device} {
         padding: 65px 15px 50px;
     }

@@ -102,25 +102,6 @@
 .owl-carousel .owl-item img{
   width: auto;
 }
-@keyframes jumping_animation {
-  0% {
-     top: 20px;
-  }
-  50% {
-     top: 30px
-  }
-  100% {
-     top: 70px;
-  }
-}
-@keyframes jumping_animation2 {
-  0% {
-     left: 20px;
-  }
-  50% {
-    left: 30px
-  }
-  100% {
-    left: 70px;
-  }
+.service-index{
+  overflow-x: hidden;
 }

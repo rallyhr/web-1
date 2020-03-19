@@ -104,7 +104,7 @@
   }
 
 a.navbar-brand {
-  max-width: 175px;
+  max-width: 130px;
 }
 .main-menu{
   @include transition;
@@ -134,6 +134,8 @@ a.navbar-brand {
     font-size: 50px;
     text-transform: capitalize;
     max-width: 175px;
+    line-height: 46px;
+    color: #4c5258;
     @media #{$small_device} {
       font-size: 35px;
     }

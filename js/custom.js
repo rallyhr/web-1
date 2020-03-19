@@ -9,15 +9,16 @@
     loop:true,
     autoplay: true,
     autoplayTimeout:3000,
-    dots: true
+    dots: true,
 });
 
 $('.platform-carousel').owlCarousel({
     items: 1,
     loop:true,
     autoplay: true,
-    autoplayTimeout:3000,
-    dots: false
+    dots: false,
+    animateOut: 'fadeOut',
+    animateIn: 'fadeIn',
 });
     /* =================================
             ===  Sticky Menu       ===

@@ -1,9 +1,9 @@
 .service-card {
     @extend .overly;
-    height: 455px;
+    min-height: 455px;
     background: $brand-white;
     @include transition;
-    width: 500px;
+    max-width: 520px;
     overflow: hidden;
 
     @media #{$tab_device} {
@@ -30,7 +30,7 @@
         left: 0px;
         top: 0px;
         content: "";
-        background: url(../images/components/cs.png)no-repeat center top / contain;
+        background: url(../images/components/cs.png)no-repeat center top;
         @include opacity(0);
         width: 100%;
         height: 100%;
@@ -44,14 +44,24 @@
     }
 
     .service-hover {
-        max-width: 300px;
         position: absolute;
-        bottom: -27%;
+        bottom: -58%;
         left: 10%;
+        width: 65%;
         @include transition;
+
+        @media #{$tab_device} {
+            width: 75%;
+        }
+
+        @media #{$small_device} {
+            max-width: 90%;
+        }
+
         p {
+            padding-top: 70px;
             @include transition;
-            @include opacity(0);
+
             @media #{$tab_device} {
                 font-size: 14px;
             }
@@ -80,7 +90,6 @@
         position: absolute;
         top: 30px;
         right: 30px;
-        color: $hover-color;
 
     }
 
@@ -106,14 +115,16 @@
         height: 364px;
         width: 360px;
         @include transition;
-        
+        .service-hover {
+            width: 73%;
+            bottom: -50%;
+        }
 
         &::after {
-            background: url(../images/components/buser.svg)no-repeat center right / contain; 
+            background: url(../images/components/buser.svg)no-repeat center right;
         }
         &:hover{
-            height: 455px;
-            width: 500px;
+            max-width: 100%;
         }
     }
 
@@ -121,6 +132,7 @@
     &.active .service-hover {
         @include opacity(1);
         bottom: 30px;
+
         @media #{$tab_device} {
             bottom: 10px;
         }
@@ -133,6 +145,7 @@
     &:hover .service-hover p,
     &.active .service-hover p {
         @include opacity(1);
+        padding-top: 30px;
         visibility: visible;
     }
 
@@ -172,47 +185,32 @@
 }
 
 .about-service {
-    padding-bottom: 22px;
+    padding-bottom: 20px;
+    background-color: #f8fcff;
     background-repeat: no-repeat;
     background-position: top right;
-    @extend .overly;
-    &::before{
-        background: url(../images/banner/abs.png) no-repeat left bottom;
-        z-index: 2;
-        top: 60px;
-        width: 48%;
-        background-size: contain;    
-    }
-    &::after{
+    &::after {
         position: absolute;
-        right: 0%;
-        background: url(../images/components/newglobe.svg)no-repeat top right;
+        width: 87%;
+        height: 100%;
+        background-color: $brand-white;
         content: "";
+        right: 0px;
         top: 0px;
-        width: 447px;
-        height: 390px;
+        z-index: -1;
     }
 }
 
 .about-s-text {
-    padding: 60px 0;
-    @extend .overly;
+    max-width: 70%;
+    position: relative;
+    margin: 0 auto;
+    padding: 60px 30px;
 
-    &::before{
-        background: #f8fcff;
-     width: 117.7%;;
-        left: -30px;
-    } 
-  
-   >  p{
-        
-    max-width: 75%;
     @media #{$small_device} {
-
+        padding: 30px;
         max-width: 90%;
     }
-    }
-   
 
 
     p {
@@ -222,7 +220,21 @@
 }
 
 .about-s-inner {
+    @extend .overly;
     margin-top: 50px;
+
+    &::before {
+        background: url(../images/banner/abs.png)no-repeat center center / cover;
+        width: 80%;
+        left: -35%;
+        height: 140%;
+
+        @media #{$small_device} {
+            display: none;
+        }
+
+    }
+
     p {
         font-size: 16px;
         line-height: 22px;
@@ -233,11 +245,7 @@
 .geo-card {
     max-width: 277px;
     margin: 0 auto 60px;
-    height: 244px;
-    .service-hover{
-        @include opacity(1);
-        bottom: 30px;
-    }
+
     h4 {
         font-size: 16px;
         color: $hover-color;
@@ -255,9 +263,7 @@
         &::before {
             @include opacity(1);
         }
-        &::after{
-            background: url(../images/components/buser.svg) no-repeat center right / contain;
-        }
+
         h3 a,
         i {
             font-size: 30px;
@@ -396,7 +402,7 @@
     max-width: 277px;
     padding: 30px;
     margin-top: 30px;
-    height: 231px;
+
     h3 a {
         font-size: 30px;
         color: $brand-white;
@@ -404,6 +410,10 @@
 
     &::before {
         @include opacity(1);
+    }
+
+    &:hover::after {
+        @include opacity(.2)
     }
 
     i {

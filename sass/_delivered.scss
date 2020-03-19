@@ -63,12 +63,11 @@
     padding: 30px;
     width: 27.33%;
     float: left;
-    margin-right: 28px;
-    margin-bottom: 28px;
+    margin-right: 38px;
+    margin-bottom: 38px;
     position: relative;
     min-height: 235px;
     @include transition;
-    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.03);
 
     @media #{$small_device} {
         width: 100%;
@@ -124,6 +123,7 @@
 
     &:hover {
         background: $hover-color;
+        box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.17);
     }
 
     &:hover i {

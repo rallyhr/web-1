@@ -1,61 +1,87 @@
-.footer{
+.footer {
     background-repeat: no-repeat;
     background-position: center top;
     padding: 85px 0 50px;
 }
-.widget{
-    .widget-title{
+
+.widget {
+    .widget-title {
         text-transform: uppercase;
     }
-    .f-logo{
+
+    .f-logo {
         margin-bottom: 50px;
 
     }
-    .f-social{
+
+    .f-social {
         margin-bottom: 10px;
-        a{
-            margin-right: 10px;
-            font-size: 20px;
-            &:hover{
-                color: $hover-color         ;
+
+        a {
+            margin-right: 13px;
+            font-size: 22px;
+
+            &:hover {
+                color: $hover-color;
             }
         }
     }
-   .subscribe-form{
-       position: relative;
-       max-width: 80%;
-       margin-left: auto;
-       @media #{$small_device} {
-        max-width: 100%;
+
+    .subscribe-form {
+        position: relative;
+        max-width: 90%;
+        margin-left: auto;
+        margin-top: 75px;
+        @media #{$small_device} {
+            max-width: 100%;
+        }
+
+        input {
+            background-color: $hover-color;
+            border: none;
+            text-align: left;
+            color: $brand-white;
+            padding: 19px;
+
+            &::placeholder {
+                color: $brand-white;
+            }
+        }
+
+        button {
+            position: absolute;
+            right: 10px;
+            top: 0px;
+            color: $brand-white;
+            background: transparent;
+            cursor: pointer;
+            border: none;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
-  
-       input{
-           background-color: $hover-color;
-           border: none;
-           text-align: left;
-           color: $brand-white;
-           padding: 19px;
-           &::placeholder{
-               color: $brand-white;
-           }
-       }
-       button{
-           position: absolute;
-           right: 10px;
-           top: 0px;
-           color: $brand-white;
-           background: transparent;
-           cursor: pointer;
-           border: none;
-           top: 50%;
-           transform: translateY(-50%);
-       }
-   }
-   &.contact-widget{
-    max-width: 90%;
-    margin-left: auto;
-    @media #{$small_device} {
-        margin: 20px auto 30px 0;
-    }  
-   }
+
+    &.contact-widget {
+        max-width: 90%;
+        margin-left: auto;
+        padding-top: 59px;
+
+        @media #{$small_device} {
+            margin: 20px auto 30px 0;
+        }
+    }
+
+    &.c-right-widget {
+        p {
+            font-size: 13px;
+            font-family: sf-ui-desplay-semibold;
+            font-size: 13px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #4c5258;
+        }
+    }
 }

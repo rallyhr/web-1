@@ -1,77 +1,89 @@
 .banner-section {
-overflow: hidden;
-@extend .overly;
-&::before{
-    background: url(../images/banner/header-bg.svg);
-    z-index: -1;
-    width: 96%;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 28px;
-}
-&::after{
-    position: absolute;
-    content: "";
-    background-color: $theme-color;
-    width: 100%;
-    left: 62%;
-    transform: translateX(-50%);
-    bottom: 0px;
-    height: 20%;
-}
-.banner-wrap{
+    overflow: hidden;
     @extend .overly;
-    &::before{
-        background: url(../images/banner/banner1.jpg)no-repeat center right / contain;
-        width: 40%;
-        left: auto;
-        right: -9%;
-        top: 65%;
-        transform: translateY(-50%);
-        @media #{$small_device} {
-           display: none; 
+
+    &::before {
+        background: url(../images/banner/header-bg.svg);
+        z-index: -1;
+        width: 96%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 28px;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        background-color: $theme-color;
+        width: 100%;
+        left: 62%;
+        transform: translateX(-50%);
+        bottom: 0px;
+        height: 20%;
+    }
+
+    .banner-wrap {
+        @extend .overly;
+
+        &::before {
+            background: url(../images/banner/banner1.jpg)no-repeat center right / contain;
+            width: 40%;
+            left: auto;
+            right: -8.7%;
+            top: 67%;
+            transform: translateY(-50%);
+
+            @media #{$small_device} {
+                display: none;
+            }
         }
     }
-}
 }
 
 .banner-text {
     .banner-title {
-        font-size    : 72px;
-        color        : $color;
+        font-size: 72px;
+        color: $color;
         margin-bottom: 10px;
+
         @media #{$tab_device} {
             font-size: 55px;
         }
+
         @media #{$small_device} {
             font-size: 40px;
         }
-      
+
     }
 
     p {
         font-size: 40px;
+
         @media #{$tab_device} {
-            font-size: 30px ;
+            font-size: 30px;
         }
+
         @media #{$small_device} {
             font-size: 20px;
         }
     }
 
-    img {
-        float: right;
-      
+    .banner-thumb {
+        max-width: 36%;
+        margin-left: auto;
+        padding-top: 30px;
     }
 }
 
 .banner-wrap {
-    padding-top   : 285px;
+    padding-top: 285px;
     padding-bottom: 100px;
+
     @media #{$small_device} {
         padding-top: 150px;
         padding-bottom: 180px;
     }
+
     .banner-promo {
         img {
             margin-top: 35px;

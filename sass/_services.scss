@@ -79,6 +79,7 @@
         top: 30px;
         right: 30px;
         color: $hover-color;
+        @include transition;
 
     }
 
@@ -98,11 +99,14 @@
     &.active i {
         color: $brand-white
     }
-
+    &.active i{
+        top: 80%;
+        right: 60px;
+    }
     &.minus-left {
         margin-left: auto;
-        height: 364px;
-        width: 360px;
+        height: 363px;
+        width: 363px;
         @include transition;
         &::after {
             background: url(../images/components/buser.svg)no-repeat center right / contain; 
@@ -110,6 +114,10 @@
         &:hover {
             width: 576px;
             height: 508px;
+        }
+        &:hover i{
+            top: 80%;
+            right: 60px;
         }
     }
 

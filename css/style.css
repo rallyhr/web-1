@@ -555,7 +555,12 @@ a.navbar-brand {
     position: absolute;
     top: 30px;
     right: 30px;
-    color: #973694; }
+    color: #973694;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; }
   .service-card:hover::before {
     opacity: 0.95;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
@@ -571,10 +576,13 @@ a.navbar-brand {
   .service-card.active a,
   .service-card.active i {
     color: #fff; }
+  .service-card.active i {
+    top: 80%;
+    right: 60px; }
   .service-card.minus-left {
     margin-left: auto;
-    height: 364px;
-    width: 360px;
+    height: 363px;
+    width: 363px;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -ms-transition: all 0.4s ease-in-out;
@@ -585,6 +593,9 @@ a.navbar-brand {
     .service-card.minus-left:hover {
       width: 576px;
       height: 508px; }
+    .service-card.minus-left:hover i {
+      top: 80%;
+      right: 60px; }
   .service-card:hover .service-hover,
   .service-card.active .service-hover {
     opacity: 1;

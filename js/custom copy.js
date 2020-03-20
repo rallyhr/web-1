@@ -11,25 +11,29 @@
     autoplayTimeout:3000,
     dots: true,
 });
-
+$(".show_commentsandnotes_container").click(function () {
+    $('.commentsandnotes_bg').fadeIn(1000, function() {
+       $('.commentsandnotes_bg').addClass('show');
+    });
+    $('.commentsandnotes_container').fadeIn(1000, function() {
+       $('.commentsandnotes_container').addClass('show');
+    });
+});
 $('.minus-left').on('mouseenter',function(){
-    $('.sos').removeClass('active');
-    $('.sos').animate({
-        height: '360px',
-        width: '360px',
-    },500);
+    $('.sos').fadeIn(1000, function(){
 
+    });
+    .removeClass('active', 1000)
+    
+    .css({'height': '360px', 'width' : '360px', 'margin-left': '90px'} );
 
 });
 
 $('.minus-left').on('mouseleave',function(e){
     
-    $('.sos').addClass('active');
-    $('.sos').animate({
-        height: '508px',
-        width: '576px',
-    },500);
-
+    $('.sos')
+    .addClass('active')
+    .css({'height': '508px', 'width' : '576px', 'margin-left': 'auto'}); 
 });
 
 

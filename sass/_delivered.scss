@@ -124,8 +124,11 @@
     &:hover {
         background: $hover-color;
         box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.17);
+        h3 a{
+            color:$brand-white;
+        }
     }
-
+    
     &:hover i {
         color: $brand-white;
     }

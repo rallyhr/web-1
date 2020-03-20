@@ -477,12 +477,8 @@ a.navbar-brand {
 
 .service-card {
   background: #fff;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 508px; }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .service-card {
       padding: 150px 40px 100px; } }
@@ -519,11 +515,6 @@ a.navbar-brand {
     filter: alpha(opacity=0);
     width: 100%;
     height: 100%;
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -ms-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
     z-index: -1; }
   .service-card.active::after {
     opacity: 1;
@@ -547,25 +538,23 @@ a.navbar-brand {
       transition: all 0.4s ease-in-out;
       opacity: 0;
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-      filter: alpha(opacity=0); }
+      filter: alpha(opacity=0);
+      visibility: hidden; }
       @media only screen and (min-width: 768px) and (max-width: 991px) {
         .service-card .service-hover p {
           font-size: 14px; } }
-  .service-card a {
+  .service-card h3 {
     font-size: 45px;
-    max-width: 320px;
-    color: #4c5258;
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -ms-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out; }
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
-      .service-card a {
-        font-size: 32px; } }
-    @media only screen and (max-width: 767px) {
-      .service-card a {
-        font-size: 35px; } }
+    line-height: 1; }
+    .service-card h3 a {
+      max-width: 320px;
+      color: #4c5258; }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .service-card h3 a {
+          font-size: 32px; } }
+      @media only screen and (max-width: 767px) {
+        .service-card h3 a {
+          font-size: 35px; } }
   .service-card i {
     font-size: 26px;
     -webkit-transition: all 0.4s ease-in-out;
@@ -600,18 +589,13 @@ a.navbar-brand {
   .service-card.active i {
     top: 80%;
     right: 60px; }
-  .service-card.active h3 a,
-  .service-card:hover h3 a {
+  .service-card.active h3,
+  .service-card:hover h3 {
     font-size: 50px; }
   .service-card.minus-left {
     margin-left: auto;
     height: 363px;
-    width: 363px;
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -ms-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out; }
+    width: 363px; }
     .service-card.minus-left::after {
       background: url(../images/components/buser.svg) no-repeat center right/contain; }
     .service-card.minus-left:hover {
@@ -673,39 +657,36 @@ a.navbar-brand {
   padding-bottom: 22px;
   background-repeat: no-repeat;
   background-position: top right;
-  margin-top: -50px; }
+  margin-top: -50px;
+  z-index: 2; }
   .about-service::before {
-    background: url(../images/banner/abs.png) no-repeat left bottom;
-    z-index: 2;
+    z-index: -1;
     top: auto;
-    width: 48%;
-    background-size: contain;
-    height: 81%;
-    bottom: -10%;
-    left: -7%; }
-    @media only screen and (min-width: 1400px) and (max-width: 1920px) {
-      .about-service::before {
-        width: 37%;
-        height: 76%;
-        bottom: -12%;
-        left: 7%; } }
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 7%;
+    background: #f8fcff; }
   .about-service::after {
     position: absolute;
     right: -3%;
-    background: url(../images/components/newglobe.svg) no-repeat top right;
+    background: url(../images/components/newglobe.svg) no-repeat top right/contain;
     content: "";
     top: 0;
-    width: 447px;
+    width: 647px;
     height: 390px;
-    z-index: 2;
-    background-size: contain; }
+    z-index: -1; }
 
 .about-s-text {
-  padding: 50px 0; }
+  padding: 50px 0;
+  z-index: 0; }
   .about-s-text::before {
-    background: #f8fcff;
-    width: 247.7%;
-    left: -30px; }
+    background: url(../images/banner/abs.png) no-repeat left bottom;
+    width: 645px;
+    z-index: -1;
+    left: -25%;
+    height: 401px;
+    top: 43%; }
   .about-s-text > p {
     margin-left: 20px;
     max-width: 75%; }
@@ -961,6 +942,8 @@ a.navbar-brand {
   .deliver-card:hover {
     background: #973694;
     box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.17); }
+    .deliver-card:hover h3 a {
+      color: #fff; }
   .deliver-card:hover i {
     color: #fff; }
   .deliver-card:hover span {

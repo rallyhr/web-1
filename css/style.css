@@ -691,13 +691,14 @@ a.navbar-brand {
         left: 7%; } }
   .about-service::after {
     position: absolute;
-    right: 0%;
+    right: -3%;
     background: url(../images/components/newglobe.svg) no-repeat top right;
     content: "";
-    top: 0px;
+    top: 0;
     width: 447px;
     height: 390px;
-    z-index: 2; }
+    z-index: 2;
+    background-size: contain; }
 
 .about-s-text {
   padding: 50px 0; }

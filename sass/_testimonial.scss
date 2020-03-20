@@ -2,6 +2,14 @@
 .testimonial-section{
     position: relative;
     padding-bottom: 100px;
+    margin-bottom: 50px;
+    @extend .overly;
+    &::before{
+        background: $brand-white;
+        width: 96%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
     .test-bg{
         position: absolute;
         top: 20%;
@@ -15,10 +23,10 @@
 .testimonial-wrap{
     max-width: 95%;
     position: relative;
-    top: 20%;
+    top: 38%;
     margin: 0 auto;
 
-    padding-top: 250px;
+    padding-top: 150px;
 }
 .single-quote {
     @extend .clear;

@@ -19,7 +19,7 @@
 }
 .platform-txt-left{
     position: relative;
-    max-width: 65%;
+    max-width: 67%;
     @media #{$small_device} {
         margin-bottom: 30px;
     }
@@ -27,7 +27,7 @@
     a{
         font-size: 20px;
         color: $brand-white;
-        max-width: 85%;
+        font-family: sf-ui-desplay-black;
         img{
             position: absolute;
             right: -70px;
@@ -61,7 +61,6 @@
             display: block;
             font-family: sf-ui-desplay-black;
             border: none;
-            max-width: 90%;
             text-transform: uppercase;
             &.active {
                 color: $hover-color;

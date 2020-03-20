@@ -15,13 +15,13 @@
 $('.minus-left').on('mouseenter',function(e){
     $('.sos')
     .removeClass('active')
-    .css({'height': '360px', 'width' : '360px'} );
+    .css({'height': '360px', 'width' : '360px', 'margin-left': '90px'} );
 });
 
 $('.minus-left').on('mouseleave',function(e){
     $('.sos')
     .addClass('active')
-    .css({'height': '508px', 'width' : '576px'});
+    .css({'height': '508px', 'width' : '576px', 'margin-left': 'auto'});
 });
 
 

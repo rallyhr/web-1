@@ -12,7 +12,10 @@
   font-family: sf-ui-desplay-semibold;
   src: url(../fonts/sf-ui-display-regular.woff);
 }
-
+@font-face {
+  font-family: sf-ui-desplay-heavy;
+    src: url(../fonts/sf-ui-display-black.woff);
+}
 @font-face {
   font-family: sf-ui-desplay-black;
     src: url(../fonts/sf-ui-display-black.woff);

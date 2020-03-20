@@ -15,6 +15,10 @@
   src: url(../fonts/sf-ui-display-regular.woff); }
 
 @font-face {
+  font-family: sf-ui-desplay-heavy;
+  src: url(../fonts/sf-ui-display-black.woff); }
+
+@font-face {
   font-family: sf-ui-desplay-black;
   src: url(../fonts/sf-ui-display-black.woff); }
 
@@ -90,10 +94,10 @@ img, figure {
   display: table;
   content: ""; }
 
-.overly, .header-promo, .banner-section, .banner-section .banner-wrap, .service-card, .about-service, .about-s-text, .about-talent, .about-talent .talent-wrap .talent-txt ul li, .delivered-section, .single-quote .quote-text, .about-us, .contact-us {
+.overly, .header-promo, .banner-section, .banner-section .banner-wrap, .service-card, .about-service, .about-s-text, .about-talent, .about-talent .talent-wrap .talent-txt ul li, .delivered-section, .testimonial-section, .single-quote .quote-text, .about-us, .contact-us {
   position: relative;
   z-index: 1; }
-  .overly::before, .header-promo::before, .banner-section::before, .banner-section .banner-wrap::before, .service-card::before, .about-service::before, .about-s-text::before, .about-talent::before, .about-talent .talent-wrap .talent-txt ul li::before, .delivered-section::before, .single-quote .quote-text::before, .about-us::before, .contact-us::before {
+  .overly::before, .header-promo::before, .banner-section::before, .banner-section .banner-wrap::before, .service-card::before, .about-service::before, .about-s-text::before, .about-talent::before, .about-talent .talent-wrap .talent-txt ul li::before, .delivered-section::before, .testimonial-section::before, .single-quote .quote-text::before, .about-us::before, .contact-us::before {
     position: absolute;
     left: 0px;
     top: 0px;
@@ -352,15 +356,16 @@ a.navbar-brand {
 .widget .f-social {
   margin-bottom: 10px; }
   .widget .f-social a {
-    margin-right: 10px;
-    font-size: 20px; }
+    margin-right: 13px;
+    font-size: 22px; }
     .widget .f-social a:hover {
       color: #973694; }
 
 .widget .subscribe-form {
   position: relative;
-  max-width: 80%;
-  margin-left: auto; }
+  max-width: 90%;
+  margin-left: auto;
+  margin-top: 75px; }
   @media only screen and (max-width: 767px) {
     .widget .subscribe-form {
       max-width: 100%; } }
@@ -369,7 +374,8 @@ a.navbar-brand {
     border: none;
     text-align: left;
     color: #fff;
-    padding: 19px; }
+    padding: 19px;
+    font-family: sf-ui-desplay-heavy; }
     .widget .subscribe-form input::placeholder {
       color: #fff; }
   .widget .subscribe-form button {
@@ -385,10 +391,22 @@ a.navbar-brand {
 
 .widget.contact-widget {
   max-width: 90%;
-  margin-left: auto; }
+  margin-left: auto;
+  padding-top: 59px; }
   @media only screen and (max-width: 767px) {
     .widget.contact-widget {
       margin: 20px auto 30px 0; } }
+
+.widget.c-right-widget p {
+  font-size: 13px;
+  font-family: sf-ui-desplay-semibold;
+  font-size: 13px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4c5258; }
 
 .banner-section {
   overflow: hidden; }
@@ -412,8 +430,8 @@ a.navbar-brand {
     background: url(../images/banner/banner1.jpg) no-repeat center right/contain;
     width: 40%;
     left: auto;
-    right: -9%;
-    top: 65%;
+    right: -8.7%;
+    top: 67%;
     transform: translateY(-50%); }
     @media only screen and (max-width: 767px) {
       .banner-section .banner-wrap::before {
@@ -439,8 +457,10 @@ a.navbar-brand {
     .banner-text p {
       font-size: 20px; } }
 
-.banner-text img {
-  float: right; }
+.banner-text .banner-thumb {
+  max-width: 36%;
+  margin-left: auto;
+  padding-top: 30px; }
 
 .banner-wrap {
   padding-top: 285px;
@@ -472,7 +492,8 @@ a.navbar-brand {
       margin-bottom: 60px; } }
   .service-card.active {
     width: 576px;
-    height: 508px; }
+    height: 508px;
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.17); }
   .service-card::before {
     background: #973694;
     opacity: 0;
@@ -531,7 +552,7 @@ a.navbar-brand {
         .service-card .service-hover p {
           font-size: 14px; } }
   .service-card a {
-    font-size: 50px;
+    font-size: 45px;
     max-width: 320px;
     color: #4c5258;
     -webkit-transition: all 0.4s ease-in-out;
@@ -579,6 +600,9 @@ a.navbar-brand {
   .service-card.active i {
     top: 80%;
     right: 60px; }
+  .service-card.active h3 a,
+  .service-card:hover h3 a {
+    font-size: 50px; }
   .service-card.minus-left {
     margin-left: auto;
     height: 363px;
@@ -592,7 +616,8 @@ a.navbar-brand {
       background: url(../images/components/buser.svg) no-repeat center right/contain; }
     .service-card.minus-left:hover {
       width: 576px;
-      height: 508px; }
+      height: 508px;
+      box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.17); }
     .service-card.minus-left:hover i {
       top: 80%;
       right: 60px; }
@@ -653,11 +678,17 @@ a.navbar-brand {
     background: url(../images/banner/abs.png) no-repeat left bottom;
     z-index: 2;
     top: auto;
-    width: 49%;
+    width: 48%;
     background-size: contain;
-    height: 86%;
+    height: 81%;
     bottom: -10%;
-    left: -65px; }
+    left: -7%; }
+    @media only screen and (min-width: 1400px) and (max-width: 1920px) {
+      .about-service::before {
+        width: 37%;
+        height: 76%;
+        bottom: -12%;
+        left: 7%; } }
   .about-service::after {
     position: absolute;
     right: 0%;
@@ -714,18 +745,20 @@ a.navbar-brand {
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
     transform: translateY(0); }
-  .geo-card.service-card::before {
-    opacity: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    filter: alpha(opacity=100); }
-  .geo-card.service-card::after {
-    background: url(../images/components/buser.svg) no-repeat center right/contain; }
-  .geo-card.service-card .service-hover {
-    max-width: 160px; }
-  .geo-card.service-card h3 a,
-  .geo-card.service-card i {
-    font-size: 30px;
-    color: #fff; }
+  .geo-card.service-card {
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.17); }
+    .geo-card.service-card::before {
+      opacity: 1;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+      filter: alpha(opacity=100); }
+    .geo-card.service-card::after {
+      background: url(../images/components/buser.svg) no-repeat center right/contain; }
+    .geo-card.service-card .service-hover {
+      max-width: 160px; }
+    .geo-card.service-card h3 a,
+    .geo-card.service-card i {
+      font-size: 30px;
+      color: #fff; }
   .geo-card:hover span {
     transform: translateY(-10px); }
 
@@ -797,7 +830,8 @@ a.navbar-brand {
     .talent-services .ts-text h4 {
       font-size: 16px;
       color: #973694;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      font-family: sf-ui-desplay-heavy; }
     .talent-services .ts-text p {
       margin-bottom: 25px; }
     .talent-services .ts-text span {
@@ -812,7 +846,9 @@ a.navbar-brand {
   box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.17); }
   .service-card.ts-card h3 a {
     font-size: 30px;
-    color: #fff; }
+    color: #fff;
+    position: absolute;
+    bottom: 30px; }
   .service-card.ts-card::before {
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -863,16 +899,15 @@ a.navbar-brand {
   padding: 30px;
   width: 27.33%;
   float: left;
-  margin-right: 28px;
-  margin-bottom: 28px;
+  margin-right: 38px;
+  margin-bottom: 38px;
   position: relative;
   min-height: 235px;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.03); }
+  transition: all 0.4s ease-in-out; }
   @media only screen and (max-width: 767px) {
     .deliver-card {
       width: 100%;
@@ -923,7 +958,8 @@ a.navbar-brand {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=100); }
   .deliver-card:hover {
-    background: #973694; }
+    background: #973694;
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.17); }
   .deliver-card:hover i {
     color: #fff; }
   .deliver-card:hover span {
@@ -938,7 +974,13 @@ a.navbar-brand {
 
 .testimonial-section {
   position: relative;
-  padding-bottom: 100px; }
+  padding-bottom: 100px;
+  margin-bottom: 50px; }
+  .testimonial-section::before {
+    background: #fff;
+    width: 96%;
+    left: 50%;
+    transform: translateX(-50%); }
   .testimonial-section .test-bg {
     position: absolute;
     top: 20%;
@@ -950,9 +992,9 @@ a.navbar-brand {
 .testimonial-wrap {
   max-width: 95%;
   position: relative;
-  top: 20%;
+  top: 38%;
   margin: 0 auto;
-  padding-top: 250px; }
+  padding-top: 150px; }
 
 .single-quote .quote-brand {
   padding-bottom: 10px; }
@@ -1046,14 +1088,14 @@ a.navbar-brand {
 
 .platform-txt-left {
   position: relative;
-  max-width: 65%; }
+  max-width: 67%; }
   @media only screen and (max-width: 767px) {
     .platform-txt-left {
       margin-bottom: 30px; } }
   .platform-txt-left a {
     font-size: 20px;
     color: #fff;
-    max-width: 85%; }
+    font-family: sf-ui-desplay-black; }
     .platform-txt-left a img {
       position: absolute;
       right: -70px;
@@ -1083,7 +1125,6 @@ a.navbar-brand {
       display: block;
       font-family: sf-ui-desplay-black;
       border: none;
-      max-width: 90%;
       text-transform: uppercase; }
       .platforms-tab .nav .nav-link.active {
         color: #973694;
